@@ -37,12 +37,12 @@ export default function Header() {
   ];
 
   return (
-    <header className="fixed top-0 w-full z-50 flex justify-center p-3 md:p-6 transition-all duration-300">
-      <div className="bg-white rounded-full px-4 md:px-6 py-3 md:py-4 flex items-center justify-between w-full max-w-5xl shadow-sm relative">
+    <header className="fixed top-0 w-full z-50 flex justify-center p-4 md:p-6 transition-all duration-300">
+      <div className="bg-white rounded-full px-5 py-4 flex items-center justify-between w-full max-w-5xl shadow-sm relative">
         
         <a href="/" onClick={handleHomeClick} className="flex items-center gap-2 cursor-pointer hover:opacity-80 transition-opacity z-50">
           <img src="/LogoPNG.png" alt="NHN Qrup Logo" className="h-8 md:h-10 w-auto object-contain" />
-          <span className="font-black text-lg md:text-2xl tracking-tight text-[#131312] hidden sm:block">NHN Qrup</span>
+          <span className="font-black text-xl md:text-2xl tracking-tight text-[#131312]">NHN Qrup</span>
         </a>
         
         {/* Desktop Nav */}
@@ -60,17 +60,16 @@ export default function Header() {
         </div>
 
         {/* Mobile Buttons */}
-        <div className="flex items-center gap-2 lg:hidden z-50 ml-auto">
-          <span className="font-black text-lg tracking-tight text-[#131312] sm:hidden mr-2">NHN Qrup</span>
-          <Link href="/contact" className="bg-[#ff4f14] text-white px-4 py-1.5 rounded-full text-xs font-bold hover:bg-[#e64612] transition-colors flex items-center gap-1 shadow-sm">
-            <Phone size={12} />
+        <div className="flex items-center gap-3 lg:hidden z-50 ml-auto">
+          <Link href="/contact" className="bg-[#ff4f14] text-white px-4 py-2 rounded-full text-xs font-bold hover:bg-[#e64612] transition-colors flex items-center gap-1 shadow-sm">
+            <Phone size={14} />
             ƏLAQƏ
           </Link>
           <button 
-            className="p-1 text-[#131312] ml-1" 
+            className="p-1 text-[#131312]" 
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           >
-            {isMobileMenuOpen ? <X size={26} /> : <Menu size={26} />}
+            {isMobileMenuOpen ? <X size={28} /> : <Menu size={28} />}
           </button>
         </div>
 
