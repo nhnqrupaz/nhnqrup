@@ -16,7 +16,7 @@ export default function Footer() {
             Peşəkar xidmətlər, innovativ həllər və gələcəyə inamlı addım. Hər zaman sizinlə.
           </p>
           <div className="flex items-center gap-4 text-white/50">
-            <a href="#" className="hover:text-[#ff4f14] transition-colors">
+            <a href="https://www.instagram.com/nhnqrup.az/" target="_blank" rel="noopener noreferrer" className="hover:text-[#ff4f14] transition-colors" title="Bizi Instagram-da izləyin">
               <FaInstagram size={28} />
             </a>
           </div>
