@@ -21,6 +21,7 @@ import {
 } from "lucide-react";
 import Link from "next/link";
 import Reveal from "@/components/Reveal";
+import NumberCounter from "@/components/NumberCounter";
 import { motion } from "framer-motion";
 import { FaInstagram } from "react-icons/fa";
 
@@ -55,20 +56,16 @@ export default function Home() {
           
           <Reveal direction="up" delay={0.2}>
           <p className="text-lg md:text-xl text-white/90 mb-10 max-w-2xl leading-relaxed">
-            From emergency repairs to complete plumbing installations, our licensed 
-            professionals deliver quality workmanship with transparent pricing and 
-            same-day service.
+            Elektrik, Elektrik mühəndisliyi, Zəif axın sistemləri, PLC, SCADA, Ağıllı ev sistemləri üzrə ixtisaslaşmış peşəkar komanda.
           </p>
           </Reveal>
           
           <div className="flex flex-wrap items-center gap-4 mb-12">
-            <button className="bg-[#ff4f14] text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-[#e64612] transition-colors">
-              Kurslara Yazıl
-            </button>
-            <button className="bg-white text-[#131312] px-8 py-4 rounded-full font-semibold text-lg flex items-center gap-2 hover:bg-gray-100 transition-colors">
+            
+            <Link href="/contact" className="bg-[#ff4f14] text-white px-8 py-4 rounded-full font-bold text-lg inline-flex items-center gap-2 hover:bg-[#e64612] transition-colors">
               <Phone size={20} />
               Bizə Zəng Edin
-            </button>
+            </Link>
           </div>
 
           <div className="flex items-center gap-4">
@@ -105,7 +102,7 @@ export default function Home() {
           </Reveal>
           <Reveal direction="up" delay={0.2}>
           <div>
-            <div className="text-5xl font-bold mb-2">2.5k+</div>
+            <div className="text-5xl font-bold mb-2">2500+</div>
             <div className="text-white/90">Projects Completed</div>
           </div>
           </Reveal>
@@ -195,10 +192,10 @@ export default function Home() {
           <div className="mb-16 max-w-3xl">
             <p className="text-[#ff4f14] font-semibold tracking-wider uppercase mb-4">Niyə Bizi Seçməlisiniz</p>
             <h2 className="text-5xl font-bold mb-6 text-[#131312]">
-              Why Homeowners Trust Our <span className="text-[#ff4f14]">Plumbing Experts</span>
+              Niyə Məhz <span className="text-[#ff4f14]">NHN QRUP?</span>
             </h2>
             <p className="text-lg text-gray-600 leading-relaxed max-w-2xl mx-auto">
-              We combine expert craftsmanship, quality materials, and exceptional customer care to deliver plumbing services you can trust.
+              Təcrübə, keyfiyyət və peşəkarlığı bir araya gətirərək mükəmməl xidmət göstəririk.
             </p>
           </div>
           </Reveal>
@@ -211,18 +208,18 @@ export default function Home() {
                 <div className="bg-white/20 w-16 h-16 rounded-2xl flex items-center justify-center mb-6">
                   <ShieldCheck size={32} className="text-white" />
                 </div>
-                <h3 className="text-2xl font-bold mb-4">Licensed & Insured</h3>
+                <h3 className="text-2xl font-bold mb-4">Rəsmi və Zəmanətli</h3>
                 <p className="text-white/90 leading-relaxed">
-                  Fully licensed and insured plumbers delivering safe, reliable workmanship with complete peace of mind for every service visit.
+                  Bütün servis və təlimlərimiz rəsmi zəmanətlə və yüksək keyfiyyət standartlarına uyğun aparılır.
                 </p>
               </div>
               <div className="bg-white rounded-3xl p-8 flex-1 text-left flex flex-col justify-center">
                 <div className="bg-[#f8f9f8] w-16 h-16 rounded-2xl flex items-center justify-center mb-6">
                   <Clock size={32} className="text-[#ff4f14]" />
                 </div>
-                <h3 className="text-2xl font-bold mb-4">Fast & Reliable Service</h3>
+                <h3 className="text-2xl font-bold mb-4">Operativ Texniki Servis</h3>
                 <p className="text-gray-600 leading-relaxed">
-                  We value your time, arriving promptly and working efficiently to solve your plumbing issues without unnecessary delays or disruptions.
+                  Nasazlıqların anında və yerində diaqnostikası, sürətli təmir və 7/24 xidmət.
                 </p>
               </div>
             </div>
@@ -233,7 +230,7 @@ export default function Home() {
             <div className="rounded-3xl overflow-hidden h-[600px] lg:h-auto relative">
               <img 
                 src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?q=80&w=800&auto=format&fit=crop" 
-                alt="Plumbing Expert" 
+                alt="NHN QRUP Eksperti" 
                 className="w-full h-full object-cover"
               />
             </div>
@@ -246,18 +243,18 @@ export default function Home() {
                 <div className="bg-[#f8f9f8] w-16 h-16 rounded-2xl flex items-center justify-center mb-6">
                   <Award size={32} className="text-[#ff4f14]" />
                 </div>
-                <h3 className="text-2xl font-bold mb-4">Quality Workmanship</h3>
+                <h3 className="text-2xl font-bold mb-4">Peşəkar Təlimçilər</h3>
                 <p className="text-gray-600 leading-relaxed">
-                  We use premium materials and proven techniques to deliver durable plumbing solutions built to perform reliably for years ahead.
+                  Tədrisimiz çoxillik təcrübəyə malik, real istehsalat sahələrində çalışan mütəxəssislər tərəfindən aparılır.
                 </p>
               </div>
               <div className="bg-white rounded-3xl p-8 flex-1 text-left flex flex-col justify-center">
                 <div className="bg-[#f8f9f8] w-16 h-16 rounded-2xl flex items-center justify-center mb-6">
                   <Headphones size={32} className="text-[#ff4f14]" />
                 </div>
-                <h3 className="text-2xl font-bold mb-4">24/7 Support</h3>
+                <h3 className="text-2xl font-bold mb-4">Sonda Rəsmi Sertifikat</h3>
                 <p className="text-gray-600 leading-relaxed">
-                  Our dedicated team is available around the clock to handle emergencies, ensuring you receive rapid assistance whenever needed.
+                  Təlimləri uğurla başa vuran hər kəsə rəsmi sertifikat təqdim olunur və işlə təminata dəstək göstərilir.
                 </p>
               </div>
             </div>
@@ -272,14 +269,9 @@ export default function Home() {
         <div className="max-w-7xl mx-auto rounded-[2rem] overflow-hidden relative h-[500px] md:h-[600px] group cursor-pointer">
           <img 
             src="https://images.unsplash.com/photo-1542013936693-884638332954?q=80&w=1600&auto=format&fit=crop" 
-            alt="Plumbing Work Video" 
+            alt="Praktiki Dərslər" 
             className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
           />
-          <div className="absolute inset-0 bg-black/30 flex items-center justify-center">
-            <div className="bg-white w-24 h-24 rounded-full flex items-center justify-center pl-2 shadow-2xl transition-transform duration-300 group-hover:scale-110">
-              <Play size={40} className="text-[#ff4f14]" />
-            </div>
-          </div>
         </div>
         </Reveal>
       </section>
@@ -374,10 +366,10 @@ export default function Home() {
               <Clock size={24} />
               <span>7/24 Operativ Texniki Dəstək Xidməti</span>
             </div>
-            <button className="bg-white text-[#ff4f14] px-8 py-4 rounded-full font-bold text-lg inline-flex items-center gap-2 hover:bg-gray-100 transition-colors">
+            <Link href="/contact" className="bg-white text-[#ff4f14] px-8 py-4 rounded-full font-bold text-lg inline-flex items-center gap-2 hover:bg-gray-100 transition-colors">
               ZƏNG ET
               <ArrowRight size={20} />
-            </button>
+            </Link>
           </div>
           </Reveal>
           
@@ -409,22 +401,15 @@ export default function Home() {
           </div>
           </Reveal>
           
-          <div className="grid md:grid-cols-3 gap-6">
-            <Reveal direction="up" delay={0.2} className="h-full">
-            <div className="rounded-3xl overflow-hidden h-80 group relative">
-              <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?q=80&w=800&auto=format&fit=crop" alt="Partnyor Şirkət" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
-            </div>
-            </Reveal>
-            <Reveal direction="up" delay={0.2} className="h-full">
-            <div className="rounded-3xl overflow-hidden h-80 group relative">
-              <img src="https://images.unsplash.com/photo-1620626011761-996317b8d101?q=80&w=800&auto=format&fit=crop" alt="Partnyor Şirkət" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
-            </div>
-            </Reveal>
-            <Reveal direction="up" delay={0.2} className="h-full">
-            <div className="rounded-3xl overflow-hidden h-80 group relative">
-              <img src="https://images.unsplash.com/photo-1607472586893-edb57cb5b3b1?q=80&w=800&auto=format&fit=crop" alt="Partnyor Şirkət" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
-            </div>
-            </Reveal>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+            {[1, 2, 3, 4].map((i) => (
+              <Reveal key={i} direction="up" delay={0.2 + (i * 0.1)} className="h-full">
+                <div className="rounded-2xl overflow-hidden h-40 bg-gray-100 flex items-center justify-center border border-gray-200 hover:shadow-md transition-shadow">
+                  {/* Empty placeholder for partner logo */}
+                  <span className="text-gray-400 font-medium">Partnyor Logo</span>
+                </div>
+              </Reveal>
+            ))}
           </div>
         </div>
       </section>

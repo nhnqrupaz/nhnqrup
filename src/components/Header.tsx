@@ -18,7 +18,7 @@ export default function Header() {
 
   return (
     <header className="fixed top-0 w-full z-50 flex justify-center p-6 transition-all duration-300">
-      <div className="bg-white rounded-full px-6 py-4 flex items-center justify-between w-full max-w-4xl shadow-sm">
+      <div className="bg-white rounded-full px-6 py-4 flex items-center justify-between w-full max-w-5xl shadow-sm">
         
         <a href="/" onClick={handleHomeClick} className="flex items-center gap-3 cursor-pointer hover:opacity-80 transition-opacity">
           <img src="/LogoPNG.png" alt="NHN Qrup Logo" className="h-10 w-auto object-contain" />

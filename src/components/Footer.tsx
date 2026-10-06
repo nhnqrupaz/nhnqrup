@@ -32,7 +32,8 @@ export default function Footer() {
             <li><Link href="/vacancies" className="hover:text-white transition-colors">Vakansiyalar</Link></li>
             <li><Link href="/cv" className="hover:text-white transition-colors">CV Göndər</Link></li>
             <li><Link href="/contact" className="hover:text-white transition-colors">Əlaqə</Link></li>
-            <li><Link href="#" className="hover:text-white transition-colors">İstifadə qaydaları</Link></li>
+            <li><Link href="/terms" className="hover:text-white transition-colors">İstifadə qaydaları</Link></li>
+            <li><Link href="/privacy" className="hover:text-white transition-colors">Məxfilik siyasəti</Link></li>
           </ul>
         </div>
       </div>
