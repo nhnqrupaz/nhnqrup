@@ -35,7 +35,7 @@ export default function Home() {
         {/* Background Image (Using placeholder) */}
         <div className="absolute inset-0 z-0">
           <img 
-            src="https://images.unsplash.com/photo-1585704032915-c3400ca199e7?q=80&w=3270&auto=format&fit=crop" 
+            src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=3270&auto=format&fit=crop" 
             alt="Hero Background" 
             className="w-full h-full object-cover"
           />
@@ -44,13 +44,13 @@ export default function Home() {
         </div>
 
         <div className="relative z-10 max-w-3xl text-white">
-          <div className="inline-flex items-center gap-2 border border-[#ff4f14] bg-[#ff4f14]/80 rounded-full px-5 py-1 mb-6 backdrop-blur-sm">
-            <span className="text-sm font-medium">7/24 Peşəkar Elektrik və Generator Servisi</span>
+          <div className="inline-flex items-center gap-2 border border-[#ff4f14] bg-[#ff4f14]/80 rounded-full px-3 md:px-5 py-0.5 md:py-1 mb-6 backdrop-blur-sm">
+            <span className="text-xs md:text-sm font-medium">7/24 Peşəkar Elektrik və Generator Servisi</span>
           </div>
           
           <Reveal direction="up" delay={0.1}>
           <h1 className="text-4xl md:text-6xl font-bold leading-[1.1] mb-6">
-            NHN QRUP<br /><span className="text-[#ff4f14]">Service and Training</span>
+            NHN QRUP<br /><span className="text-[#ff4f14]">Servis və Təlimlər</span>
           </h1>
           </Reveal>
           
@@ -70,7 +70,7 @@ export default function Home() {
       </section>
 
       {/* Stats Section */}
-      <section className="bg-[#ff4f14] py-16 px-6 lg:px-20 text-white">
+      <section className="bg-[#ff4f14] py-8 md:py-16 px-6 lg:px-20 text-white">
         <div className="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-8 divide-x divide-white/20 text-center">
           <Reveal direction="up" delay={0.1}>
           <div>
@@ -80,7 +80,7 @@ export default function Home() {
           </Reveal>
           <Reveal direction="up" delay={0.2}>
           <div>
-            <div className="text-4xl md:text-5xl font-bold mb-2"><NumberCounter end={2500} suffix="+" /></div>
+            <div className="text-4xl md:text-5xl font-bold mb-2"><NumberCounter end={500} suffix="+" /></div>
             <div className="text-white/90">Məzun və Tələbə</div>
           </div>
           </Reveal>

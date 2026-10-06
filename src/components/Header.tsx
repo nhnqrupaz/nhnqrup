@@ -14,7 +14,7 @@ export default function Header() {
   const handleHomeClick = (e: React.MouseEvent) => {
     e.preventDefault();
     if (pathname === '/') {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
+      window.scrollTo({ top: 0, behavior: 'smooth' }); document.body.scrollTop = 0; document.documentElement.scrollTop = 0;
     } else {
       router.push('/');
     }

@@ -1,4 +1,5 @@
 'use client';
+import Link from "next/link";
 import Reveal from "@/components/Reveal";
 import { ArrowRight, Clock, Award, BookOpen } from "lucide-react";
 
@@ -74,10 +75,10 @@ export default function CoursesPage() {
                     ))}
                   </div>
 
-                  <button className="w-full bg-[#131312] text-white py-4 rounded-full font-bold hover:bg-[#ff4f14] transition-colors flex items-center justify-center gap-2">
+                  <Link href={`/cv?job=${encodeURIComponent(course.title)}`} className="w-full bg-[#131312] text-white py-4 rounded-full font-bold hover:bg-[#ff4f14] transition-colors flex items-center justify-center gap-2">
                     Müraciət Et
                     <ArrowRight size={20} />
-                  </button>
+                  </Link>
                 </div>
               </div>
             </Reveal>
