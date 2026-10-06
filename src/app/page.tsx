@@ -26,8 +26,7 @@ import { FaInstagram } from "react-icons/fa";
 export default function Home() {
   return (
     <div className="flex flex-col min-h-screen bg-[#f8f9f8]">
-      <div id="top" className="absolute top-0 w-full h-1" />
-      {/* Navigation */}
+            {/* Navigation */}
       
       {/* Hero Section */}
       <section className="relative pt-40 pb-32 px-6 lg:px-20 min-h-[90vh] flex items-center">
