@@ -12,9 +12,6 @@ import SmoothScroll from "@/components/SmoothScroll";
 export const metadata: Metadata = {
   title: "NHN Qrup",
   description: "Peşəkar xidmətlər və tədris",
-  icons: {
-    icon: "/LogoPNG.png",
-  }
 };
 
 export default function RootLayout({

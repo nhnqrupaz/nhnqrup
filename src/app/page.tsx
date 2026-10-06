@@ -1,3 +1,5 @@
+"use client";
+
 import Image from "next/image";
 import { 
   Phone, 
@@ -18,28 +20,36 @@ import {
 } from "lucide-react";
 import Link from "next/link";
 import Reveal from "@/components/Reveal";
+import { motion } from "framer-motion";
 import { FaInstagram } from "react-icons/fa";
 
 export default function Home() {
   return (
-    <div className="flex flex-col min-h-screen bg-[#f8f9f8]">
+    <motion.div 
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 1.2 }}
+      className="flex flex-col min-h-screen bg-[#f8f9f8]"
+    >
+      <div id="top" className="absolute top-0 w-full h-1" />
       {/* Navigation */}
-      <header className="absolute top-0 w-full z-50 flex justify-center p-6">
+      <header className="fixed top-0 w-full z-50 flex justify-center p-6 transition-all duration-300">
         <div className="bg-white rounded-full px-6 py-4 flex items-center justify-between w-full max-w-7xl shadow-sm">
-          <div className="flex items-center gap-3">
+          <a href="#top" className="flex items-center gap-3 cursor-pointer hover:opacity-80 transition-opacity">
             <img src="/LogoPNG.png" alt="NHN Qrup Logo" className="h-8 w-auto object-contain" />
-            <span className="font-black text-2xl md:text-3xl tracking-tight bg-gradient-to-r from-[#ff4f14] to-[#131312] text-transparent bg-clip-text">NHN Qrup</span>
-          </div>
+            <span className="font-black text-2xl md:text-3xl tracking-tight text-[#131312]">NHN Qrup</span>
+          </a>
           <nav className="hidden lg:flex gap-8 text-[15px] font-medium text-[#131312]">
-            <Link href="#">Ana Səhifə</Link>
+            <Link href="#top">Ana Səhifə</Link>
             <Link href="#">Məhsullar</Link>
             <Link href="#">Xidmətlər</Link>
             <Link href="#">Kurslar</Link>
             <Link href="#">Vakansiyalar</Link>
+            <Link href="#">CV Göndər</Link>
           </nav>
-          <button className="bg-[#ff4f14] text-white px-6 py-3 rounded-full font-semibold hover:bg-[#e64612] transition-colors whitespace-nowrap">
-            CV Göndər
-          </button>
+          <a href="#contact" className="bg-[#ff4f14] text-white px-6 py-3 rounded-full font-semibold hover:bg-[#e64612] transition-colors whitespace-nowrap">
+            ƏLAQƏ
+          </a>
         </div>
       </header>
 
@@ -531,8 +541,8 @@ export default function Home() {
       </section>
 
       {/* Footer */}
-      <footer className="bg-[#131312] text-white pt-20 pb-10 px-6 lg:px-20">
-        <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 mb-16">
+      <footer id="contact" className="bg-[#131312] text-white pt-10 pb-6 px-6 lg:px-20">
+        <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
           <div className="col-span-1 flex flex-col justify-center">
             <div className="flex items-center gap-4 mb-6">
               <img src="/Logo.png" alt="NHN Qrup" className="w-16 h-16 rounded-full object-cover bg-white p-1" />
@@ -545,10 +555,14 @@ export default function Home() {
           
           <div className="col-span-1 md:justify-self-end flex flex-col">
             <h4 className="font-bold text-lg mb-6">Keçidlər</h4>
-            <ul className="space-y-4 text-white/70">
-              <li><Link href="#about" className="hover:text-white transition-colors">Haqqımızda</Link></li>
+            <ul className="grid grid-cols-2 gap-4 text-white/70">
+              <li><Link href="#top" className="hover:text-white transition-colors">Ana Səhifə</Link></li>
+              <li><Link href="#" className="hover:text-white transition-colors">Məhsullar</Link></li>
+              <li><Link href="#" className="hover:text-white transition-colors">Xidmətlər</Link></li>
+              <li><Link href="#" className="hover:text-white transition-colors">Kurslar</Link></li>
+              <li><Link href="#" className="hover:text-white transition-colors">Vakansiyalar</Link></li>
+              <li><Link href="#" className="hover:text-white transition-colors">CV Göndər</Link></li>
               <li><Link href="#contact" className="hover:text-white transition-colors">Əlaqə</Link></li>
-              <li><Link href="#" className="hover:text-white transition-colors">Məxfilik siyasəti</Link></li>
               <li><Link href="#" className="hover:text-white transition-colors">İstifadə qaydaları</Link></li>
             </ul>
             <div className="flex items-center gap-6 mt-8 text-white/50">
@@ -562,6 +576,6 @@ export default function Home() {
           <p className="mt-4 md:mt-0 font-medium tracking-wider">NHN QRUP MMC</p>
         </div>
       </footer>
-    </div>
+    </motion.div>
   );
 }
