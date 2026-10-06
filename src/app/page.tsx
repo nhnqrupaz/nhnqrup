@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { 
+  Zap, Home as HomeIcon, Monitor, Activity, Cpu, Lightbulb, 
   Phone, 
   Search, 
   Droplets, 
@@ -48,7 +49,7 @@ export default function Home() {
           
           <Reveal direction="up" delay={0.1}>
           <h1 className="text-5xl md:text-7xl font-bold leading-[1.1] mb-6">
-            Fast, Reliable Plumbing<br />Solutions You Can Trust
+            Fast, NHN QRUP (NHN GROUP)<br />Service and Training
           </h1>
           </Reveal>
           
@@ -117,7 +118,7 @@ export default function Home() {
           <Reveal direction="up" delay={0.4}>
           <div>
             <div className="text-5xl font-bold mb-2">24/7</div>
-            <div className="text-white/90">Emergency Support</div>
+            <div className="text-white/90">Texniki Dəstək</div>
           </div>
           </Reveal>
         </div>
@@ -128,7 +129,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto">
           <Reveal direction="up" delay={0.1}>
           <div className="mb-16 max-w-2xl">
-            <p className="text-[#ff4f14] font-semibold tracking-wider uppercase mb-4">Our Services</p>
+            <p className="text-[#ff4f14] font-semibold tracking-wider uppercase mb-4">Bizim Xidmətlərimiz</p>
             <h2 className="text-5xl font-bold mb-6 text-[#131312]">
               Plumbing Solutions Built <span className="text-[#ff4f14]">Around You</span>
             </h2>
@@ -144,12 +145,12 @@ export default function Home() {
             <Reveal direction="up" delay={0.2} className="h-full">
             <div className="bg-[#f8f9f8] rounded-3xl p-6 flex flex-col group h-full">
               <div className="rounded-2xl overflow-hidden mb-6 relative h-64">
-                <img src="https://images.unsplash.com/photo-1607472586893-edb57cb5b3b1?q=80&w=1000&auto=format&fit=crop" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" alt="Leak Detection" />
+                <img src="https://images.unsplash.com/photo-1607472586893-edb57cb5b3b1?q=80&w=1000&auto=format&fit=crop" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" alt="Elektrik Kursları" />
                 <div className="absolute bottom-4 left-4 bg-white w-14 h-14 rounded-2xl flex items-center justify-center shadow-lg">
                   <Search className="text-[#ff4f14]" size={28} />
                 </div>
               </div>
-              <h3 className="text-2xl font-bold mb-3">Leak Detection</h3>
+              <h3 className="text-2xl font-bold mb-3">Elektrik Kursları</h3>
               <p className="text-gray-600 mb-8 flex-grow">
                 We detect hidden leaks quickly to protect your home, prevent costly water damage, and restore peace of mind with confidence.
               </p>
@@ -166,12 +167,12 @@ export default function Home() {
             <Reveal direction="up" delay={0.3} className="h-full">
             <div className="bg-[#f8f9f8] rounded-3xl p-6 flex flex-col group h-full">
               <div className="rounded-2xl overflow-hidden mb-6 relative h-64">
-                <img src="https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?q=80&w=1000&auto=format&fit=crop" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" alt="Drain Cleaning" />
+                <img src="https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?q=80&w=1000&auto=format&fit=crop" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" alt="Ağıllı Ev (Smart Home)" />
                 <div className="absolute bottom-4 left-4 bg-white w-14 h-14 rounded-2xl flex items-center justify-center shadow-lg">
                   <Droplets className="text-[#ff4f14]" size={28} />
                 </div>
               </div>
-              <h3 className="text-2xl font-bold mb-3">Drain Cleaning</h3>
+              <h3 className="text-2xl font-bold mb-3">Ağıllı Ev (Smart Home)</h3>
               <p className="text-gray-600 mb-8 flex-grow">
                 We clear stubborn clogs and buildup to keep your drains flowing efficiently and prevent future plumbing problems year after year.
               </p>
@@ -254,12 +255,12 @@ export default function Home() {
             <Reveal direction="up" delay={0.4} className="h-full">
             <div className="bg-[#f8f9f8] rounded-3xl p-6 flex flex-col group h-full">
               <div className="rounded-2xl overflow-hidden mb-6 relative h-64">
-                <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?q=80&w=1000&auto=format&fit=crop" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" alt="Emergency Plumbing" />
+                <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?q=80&w=1000&auto=format&fit=crop" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" alt="Mühəndislik Həlləri" />
                 <div className="absolute bottom-4 left-4 bg-white w-14 h-14 rounded-2xl flex items-center justify-center shadow-lg">
                   <Siren className="text-[#ff4f14]" size={28} />
                 </div>
               </div>
-              <h3 className="text-2xl font-bold mb-3">Emergency Plumbing</h3>
+              <h3 className="text-2xl font-bold mb-3">Mühəndislik Həlləri</h3>
               <p className="text-gray-600 mb-8 flex-grow">
                 Fast 24/7 emergency plumbing services for urgent repairs, minimizing damage and restoring your home's safety with rapid expert support anytime.
               </p>
@@ -274,12 +275,12 @@ export default function Home() {
           </div>
         </div>
       </section>
-      {/* Why Choose Us Section */}
+      {/* Niyə Bizi Seçməlisiniz Section */}
       <section id="about" className="py-24 px-6 lg:px-20 bg-[#f8f9f8]">
         <div className="max-w-7xl mx-auto flex flex-col items-center text-center">
           <Reveal direction="up" delay={0.1}>
           <div className="mb-16 max-w-3xl">
-            <p className="text-[#ff4f14] font-semibold tracking-wider uppercase mb-4">Why Choose Us</p>
+            <p className="text-[#ff4f14] font-semibold tracking-wider uppercase mb-4">Niyə Bizi Seçməlisiniz</p>
             <h2 className="text-5xl font-bold mb-6 text-[#131312]">
               Why Homeowners Trust Our <span className="text-[#ff4f14]">Plumbing Experts</span>
             </h2>
@@ -370,17 +371,17 @@ export default function Home() {
         </Reveal>
       </section>
 
-      {/* How It Works Section */}
+      {/* Necə İşləyirik? Section */}
       <section className="py-24 px-6 lg:px-20 bg-white">
         <div className="max-w-7xl mx-auto text-center">
           <Reveal direction="up" delay={0.1}>
           <div className="mb-16">
-            <p className="text-[#ff4f14] font-semibold tracking-wider uppercase mb-4">How It Works</p>
+            <p className="text-[#ff4f14] font-semibold tracking-wider uppercase mb-4">Necə İşləyirik?</p>
             <h2 className="text-5xl font-bold mb-6 text-[#131312]">
               From Your Call to <span className="text-[#ff4f14]">Problem Solved</span>
             </h2>
             <p className="text-lg text-gray-600 leading-relaxed max-w-2xl mx-auto">
-              From the first call to the final fix - our process is designed to be easy, transparent, and hassle-free.
+              Servis və təlimlərə qoşulmaq çox sadə və şəffafdır.
             </p>
           </div>
           </Reveal>
@@ -395,9 +396,9 @@ export default function Home() {
               <div className="w-24 h-24 bg-white rounded-full border-[6px] border-[#f8f9f8] flex items-center justify-center shadow-lg mb-6">
                 <Calendar size={32} className="text-[#ff4f14]" />
               </div>
-              <h3 className="text-xl font-bold mb-3">Schedule Service</h3>
+              <h3 className="text-xl font-bold mb-3">Müraciət</h3>
               <p className="text-gray-600 text-center">
-                Book an appointment online or give us a call.
+                Bizimlə əlaqə saxlayın və ya onlayn qeydiyyatdan keçin.
               </p>
             </div>
             </Reveal>
@@ -408,9 +409,9 @@ export default function Home() {
               <div className="w-24 h-24 bg-[#ff4f14] text-white rounded-full border-[6px] border-[#ffece6] flex items-center justify-center shadow-lg mb-6">
                 <Search size={32} />
               </div>
-              <h3 className="text-xl font-bold mb-3">Inspect the Issue</h3>
+              <h3 className="text-xl font-bold mb-3">Diaqnostika / Baxış</h3>
               <p className="text-gray-600 text-center">
-                Our licensed plumber identifies the problem and explains the solution.
+                Tələblərinizi və ya probleminizi peşəkarlarla birlikdə təhlil edirik.
               </p>
             </div>
             </Reveal>
@@ -421,9 +422,9 @@ export default function Home() {
               <div className="w-24 h-24 bg-white rounded-full border-[6px] border-[#f8f9f8] flex items-center justify-center shadow-lg mb-6">
                 <Wrench size={32} className="text-[#ff4f14]" />
               </div>
-              <h3 className="text-xl font-bold mb-3">Repair & Install</h3>
+              <h3 className="text-xl font-bold mb-3">Praktika və Həll</h3>
               <p className="text-gray-600 text-center">
-                We complete the work using quality materials and proven techniques.
+                Təlimlərdə real avadanlıqlarla işləyir, servisdə isə problemi yerində həll edirik.
               </p>
             </div>
             </Reveal>
@@ -434,9 +435,9 @@ export default function Home() {
               <div className="w-24 h-24 bg-white rounded-full border-[6px] border-[#f8f9f8] flex items-center justify-center shadow-lg mb-6">
                 <ShieldCheck size={32} className="text-[#ff4f14]" />
               </div>
-              <h3 className="text-xl font-bold mb-3">Enjoy Peace of Mind</h3>
+              <h3 className="text-xl font-bold mb-3">Təminat və Nəticə</h3>
               <p className="text-gray-600 text-center">
-                Your plumbing is working properly, backed by reliable service.
+                Rəsmi sertifikat və ya zəmanətli xidmət əldə edərək işinizdən zövq alın.
               </p>
             </div>
             </Reveal>
@@ -451,17 +452,17 @@ export default function Home() {
           <div className="max-w-2xl mb-8 md:mb-0">
             <div className="inline-flex items-center gap-2 bg-white/20 rounded-full px-4 py-2 mb-6">
               <Siren size={20} />
-              <span className="font-semibold tracking-wide">EMERGENCY</span>
+              <span className="font-semibold tracking-wide">TƏCİLİ</span>
             </div>
             <h2 className="text-4xl md:text-5xl font-bold mb-4">
-              Need Emergency Plumbing Help?
+              Need Mühəndislik Həlləri Help?
             </h2>
             <div className="flex items-center gap-3 text-xl text-white/90 mb-8">
               <Clock size={24} />
-              <span>Available 24 Hours Every Day</span>
+              <span>7/24 Operativ Texniki Dəstək Xidməti</span>
             </div>
             <button className="bg-white text-[#ff4f14] px-8 py-4 rounded-full font-bold text-lg inline-flex items-center gap-2 hover:bg-gray-100 transition-colors">
-              CALL NOW
+              ZƏNG ET
               <ArrowRight size={20} />
             </button>
           </div>
@@ -480,17 +481,17 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Featured Projects Section */}
+      {/* Partnyorlarımız Section */}
       <section className="py-24 px-6 lg:px-20 bg-white">
         <div className="max-w-7xl mx-auto">
           <Reveal direction="up" delay={0.1}>
           <div className="mb-16 max-w-2xl">
-            <p className="text-[#ff4f14] font-semibold tracking-wider uppercase mb-4">Featured Projects</p>
+            <p className="text-[#ff4f14] font-semibold tracking-wider uppercase mb-4">Partnyorlarımız</p>
             <h2 className="text-5xl font-bold mb-6 text-[#131312]">
-              See Our Recent <span className="text-[#ff4f14]">Projects</span>
+              Bizə Güvənən <span className="text-[#ff4f14]">Şirkətlər</span>
             </h2>
             <p className="text-lg text-gray-600 leading-relaxed">
-              Take a look at the plumbing solutions we've completed, from everyday repairs to full installations, all delivered with care and precision.
+              Azərbaycanda və regionda bir çox tanınmış şirkətlərlə rəsmi əməkdaşlıq edirik.
             </p>
           </div>
           </Reveal>
