@@ -43,7 +43,7 @@ export default function Home() {
           <div className="absolute inset-0 bg-gradient-to-r from-black/60 to-transparent"></div>
         </div>
 
-        <div className="relative z-10 max-w-3xl text-white">
+        <div className="relative z-10 max-w-3xl text-white -mt-16 md:mt-0">
           <div className="inline-flex items-center gap-2 border border-[#ff4f14] bg-[#ff4f14]/80 rounded-full px-3 md:px-5 py-0.5 md:py-1 mb-4 md:mb-6 backdrop-blur-sm">
             <span className="text-xs md:text-sm font-medium">7/24 Peşəkar Elektrik və Generator Servisi</span>
           </div>
@@ -55,13 +55,13 @@ export default function Home() {
           </Reveal>
           
           <Reveal direction="up" delay={0.2}>
-          <p className="text-base md:text-lg text-white/80 mb-8 max-w-xl leading-relaxed">
+          <p className="text-base md:text-lg text-white/80 mb-14 md:mb-8 max-w-xl leading-relaxed">
             Elektrik, Zəif Axın və Ağıllı Ev sistemləri üzrə ixtisaslaşmış peşəkar komanda.
           </p>
           </Reveal>
           
           <div className="flex flex-wrap items-center gap-4 mb-12">
-            <Link href="/contact" className="bg-[#ff4f14] text-white px-8 py-4 rounded-full font-bold text-lg inline-flex items-center gap-2 hover:bg-[#e64612] transition-colors">
+            <Link href="/contact" className="bg-[#ff4f14] text-white px-6 py-3 md:px-8 md:py-4 rounded-full font-bold text-base md:text-lg inline-flex items-center gap-2 hover:bg-[#e64612] transition-colors mt-4 md:mt-0">
               <Phone size={20} />
               Bizə Zəng Edin
             </Link>
