@@ -18,6 +18,7 @@ import {
 } from "lucide-react";
 import Link from "next/link";
 import Reveal from "@/components/Reveal";
+import { FaInstagram, FaFacebook, FaLinkedin } from "react-icons/fa";
 
 export default function Home() {
   return (
@@ -25,23 +26,19 @@ export default function Home() {
       {/* Navigation */}
       <header className="absolute top-0 w-full z-50 flex justify-center p-6">
         <div className="bg-white rounded-full px-6 py-4 flex items-center justify-between w-full max-w-7xl shadow-sm">
-          <div className="flex items-center gap-2">
-            <div className="flex flex-wrap w-6 h-6 gap-0.5">
-              <div className="w-[11px] h-[11px] bg-[#131312] rounded-tl-md rounded-br-sm" />
-              <div className="w-[11px] h-[11px] bg-[#131312] rounded-tr-md rounded-bl-sm" />
-              <div className="w-[11px] h-[11px] bg-[#131312] rounded-bl-md rounded-tr-sm" />
-              <div className="w-[11px] h-[11px] bg-[#131312] rounded-br-md rounded-tl-sm" />
-            </div>
-            <span className="font-bold text-2xl tracking-tight">Plumbzo</span>
+          <div className="flex items-center gap-3">
+            <img src="/LogoPNG.png" alt="NHN Qrup Logo" className="h-8 w-auto object-contain" />
+            <span className="font-bold text-2xl tracking-tight">NHN</span>
           </div>
-          <nav className="hidden md:flex gap-8 text-[15px] font-medium text-[#131312]">
-            <Link href="#services">Services</Link>
-            <Link href="#about">About</Link>
-            <Link href="#testimonials">Testimonials</Link>
-            <Link href="#areas">Service Areas</Link>
+          <nav className="hidden lg:flex gap-8 text-[15px] font-medium text-[#131312]">
+            <Link href="#">Ana Səhifə</Link>
+            <Link href="#">Məhsullar</Link>
+            <Link href="#">Xidmətlər</Link>
+            <Link href="#">Kurslar</Link>
+            <Link href="#">Vakansiyalar</Link>
           </nav>
-          <button className="bg-[#ff4f14] text-white px-6 py-3 rounded-full font-semibold hover:bg-[#e64612] transition-colors">
-            Contact Now
+          <button className="bg-[#ff4f14] text-white px-6 py-3 rounded-full font-semibold hover:bg-[#e64612] transition-colors whitespace-nowrap">
+            CV Göndər
           </button>
         </div>
       </header>
@@ -535,59 +532,34 @@ export default function Home() {
 
       {/* Footer */}
       <footer className="bg-[#131312] text-white pt-20 pb-10 px-6 lg:px-20">
-        <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
-          <div className="col-span-1 md:col-span-1">
-            <div className="flex items-center gap-2 mb-6">
-              <div className="flex flex-wrap w-6 h-6 gap-0.5">
-                <div className="w-[11px] h-[11px] bg-white rounded-tl-md rounded-br-sm" />
-                <div className="w-[11px] h-[11px] bg-white rounded-tr-md rounded-bl-sm" />
-                <div className="w-[11px] h-[11px] bg-white rounded-bl-md rounded-tr-sm" />
-                <div className="w-[11px] h-[11px] bg-white rounded-br-md rounded-tl-sm" />
-              </div>
-              <span className="font-bold text-2xl tracking-tight">Plumbzo</span>
+        <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 mb-16">
+          <div className="col-span-1 flex flex-col justify-center">
+            <div className="flex items-center gap-4 mb-6">
+              <img src="/Logo.png" alt="NHN Qrup" className="w-16 h-16 rounded-full object-cover bg-white p-1" />
+              <span className="font-bold text-3xl tracking-tight italic">NHN Qrup</span>
             </div>
-            <p className="text-white/70 mb-6">
-              Professional plumbing solutions built around you. Reliable, fast, and 24/7.
+            <p className="text-white/70 mb-6 italic max-w-sm">
+              Peşəkar xidmətlər, innovativ həllər və gələcəyə inamlı addım. Hər zaman sizinlə.
             </p>
           </div>
-          <div>
-            <h4 className="font-bold text-lg mb-6">Company</h4>
+          
+          <div className="col-span-1 md:justify-self-end flex flex-col">
+            <h4 className="font-bold text-lg mb-6">Keçidlər</h4>
             <ul className="space-y-4 text-white/70">
-              <li><Link href="#about" className="hover:text-white transition-colors">About Us</Link></li>
-              <li><Link href="#services" className="hover:text-white transition-colors">Services</Link></li>
-              <li><Link href="#projects" className="hover:text-white transition-colors">Our Projects</Link></li>
-              <li><Link href="#contact" className="hover:text-white transition-colors">Contact</Link></li>
+              <li><Link href="#about" className="hover:text-white transition-colors">Haqqımızda</Link></li>
+              <li><Link href="#contact" className="hover:text-white transition-colors">Əlaqə</Link></li>
+              <li><Link href="#" className="hover:text-white transition-colors">Məxfilik siyasəti</Link></li>
+              <li><Link href="#" className="hover:text-white transition-colors">İstifadə qaydaları</Link></li>
             </ul>
-          </div>
-          <div>
-            <h4 className="font-bold text-lg mb-6">Services</h4>
-            <ul className="space-y-4 text-white/70">
-              <li><Link href="#" className="hover:text-white transition-colors">Leak Detection</Link></li>
-              <li><Link href="#" className="hover:text-white transition-colors">Drain Cleaning</Link></li>
-              <li><Link href="#" className="hover:text-white transition-colors">Water Heater Repair</Link></li>
-              <li><Link href="#" className="hover:text-white transition-colors">Emergency Plumbing</Link></li>
-            </ul>
-          </div>
-          <div>
-            <h4 className="font-bold text-lg mb-6">Contact Us</h4>
-            <ul className="space-y-4 text-white/70">
-              <li className="flex items-start gap-3">
-                <MapPin size={20} className="text-[#ff4f14] shrink-0 mt-1" />
-                <span>123 Plumbing St, NY 10001, United States</span>
-              </li>
-              <li className="flex items-center gap-3">
-                <Phone size={20} className="text-[#ff4f14] shrink-0" />
-                <span>+1 (555) 123-4567</span>
-              </li>
-            </ul>
+            <div className="flex items-center gap-6 mt-8 text-white/50">
+              <a href="#" className="hover:text-[#ff4f14] transition-colors"><FaInstagram size={24} /></a>
+              <a href="#" className="hover:text-[#ff4f14] transition-colors"><FaFacebook size={24} /></a>
+              <a href="#" className="hover:text-[#ff4f14] transition-colors"><FaLinkedin size={24} /></a>
+            </div>
           </div>
         </div>
         <div className="max-w-7xl mx-auto pt-8 border-t border-white/10 flex flex-col md:flex-row items-center justify-between text-white/50 text-sm">
-          <p>© 2024 Plumbzo. All rights reserved.</p>
-          <div className="flex gap-6 mt-4 md:mt-0">
-            <Link href="#" className="hover:text-white transition-colors">Privacy Policy</Link>
-            <Link href="#" className="hover:text-white transition-colors">Terms of Service</Link>
-          </div>
+          <p>© 2024 NHN Qrup. Bütün hüquqlar qorunur.</p>
         </div>
       </footer>
     </div>

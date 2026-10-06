@@ -10,8 +10,11 @@ const plusJakartaSans = Plus_Jakarta_Sans({
 import SmoothScroll from "@/components/SmoothScroll";
 
 export const metadata: Metadata = {
-  title: "Plumbzo – High Converting Plumbing & Home Services",
-  description: "Plumbing services built around you.",
+  title: "NHN Qrup",
+  description: "Peşəkar xidmətlər və tədris",
+  icons: {
+    icon: "/Logo.png",
+  }
 };
 
 export default function RootLayout({
