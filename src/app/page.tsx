@@ -455,7 +455,7 @@ export default function Home() {
               <span className="font-semibold tracking-wide">TƏCİLİ</span>
             </div>
             <h2 className="text-4xl md:text-5xl font-bold mb-4">
-              Need Mühəndislik Həlləri Help?
+              Təcili Generator və ya Elektrik Servisi Lazımdır?
             </h2>
             <div className="flex items-center gap-3 text-xl text-white/90 mb-8">
               <Clock size={24} />
