@@ -48,7 +48,6 @@ export default function Home() {
 
       {/* Hero Section */}
       <section className="relative pt-40 pb-32 px-6 lg:px-20 min-h-[90vh] flex items-center">
-        <Reveal direction="up" delay={0.2} className="w-full h-full">
         {/* Background Image (Using placeholder) */}
         <div className="absolute inset-0 z-0">
           <img 
@@ -65,15 +64,19 @@ export default function Home() {
             <span className="text-sm font-medium">Available 24/7 Every Day</span>
           </div>
           
+          <Reveal direction="up" delay={0.1}>
           <h1 className="text-5xl md:text-7xl font-bold leading-[1.1] mb-6">
             Fast, Reliable Plumbing<br />Solutions You Can Trust
           </h1>
+          </Reveal>
           
+          <Reveal direction="up" delay={0.2}>
           <p className="text-lg md:text-xl text-white/90 mb-10 max-w-2xl leading-relaxed">
             From emergency repairs to complete plumbing installations, our licensed 
             professionals deliver quality workmanship with transparent pricing and 
             same-day service.
           </p>
+          </Reveal>
           
           <div className="flex flex-wrap items-center gap-4 mb-12">
             <button className="bg-[#ff4f14] text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-[#e64612] transition-colors">
@@ -106,37 +109,42 @@ export default function Home() {
             </div>
           </div>
         </div>
-        </Reveal>
       </section>
 
       {/* Stats Section */}
       <section className="bg-[#ff4f14] py-16 px-6 lg:px-20 text-white">
-        <Reveal direction="up" delay={0.2} className="w-full h-full">
         <div className="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-8 divide-x divide-white/20 text-center">
+          <Reveal direction="up" delay={0.1}>
           <div>
             <div className="text-5xl font-bold mb-2">10+</div>
             <div className="text-white/90">Years of Experience</div>
           </div>
+          </Reveal>
+          <Reveal direction="up" delay={0.2}>
           <div>
             <div className="text-5xl font-bold mb-2">2.5k+</div>
             <div className="text-white/90">Projects Completed</div>
           </div>
+          </Reveal>
+          <Reveal direction="up" delay={0.3}>
           <div>
             <div className="text-5xl font-bold mb-2">98%</div>
             <div className="text-white/90">Customer Satisfaction</div>
           </div>
+          </Reveal>
+          <Reveal direction="up" delay={0.4}>
           <div>
             <div className="text-5xl font-bold mb-2">24/7</div>
             <div className="text-white/90">Emergency Support</div>
           </div>
+          </Reveal>
         </div>
-        </Reveal>
       </section>
 
       {/* Services Section */}
       <section id="services" className="py-24 px-6 lg:px-20 bg-white">
-        <Reveal direction="up" delay={0.2} className="w-full h-full">
         <div className="max-w-7xl mx-auto">
+          <Reveal direction="up" delay={0.1}>
           <div className="mb-16 max-w-2xl">
             <p className="text-[#ff4f14] font-semibold tracking-wider uppercase mb-4">Our Services</p>
             <h2 className="text-5xl font-bold mb-6 text-[#131312]">
@@ -147,10 +155,12 @@ export default function Home() {
               high-quality solutions for your home or business.
             </p>
           </div>
+          </Reveal>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {/* Card 1 */}
-            <div className="bg-[#f8f9f8] rounded-3xl p-6 flex flex-col group">
+            <Reveal direction="up" delay={0.2} className="h-full">
+            <div className="bg-[#f8f9f8] rounded-3xl p-6 flex flex-col group h-full">
               <div className="rounded-2xl overflow-hidden mb-6 relative h-64">
                 <img src="https://images.unsplash.com/photo-1607472586893-edb57cb5b3b1?q=80&w=1000&auto=format&fit=crop" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" alt="Leak Detection" />
                 <div className="absolute bottom-4 left-4 bg-white w-14 h-14 rounded-2xl flex items-center justify-center shadow-lg">
@@ -168,9 +178,11 @@ export default function Home() {
                 </span>
               </a>
             </div>
+            </Reveal>
 
             {/* Card 2 */}
-            <div className="bg-[#f8f9f8] rounded-3xl p-6 flex flex-col group">
+            <Reveal direction="up" delay={0.3} className="h-full">
+            <div className="bg-[#f8f9f8] rounded-3xl p-6 flex flex-col group h-full">
               <div className="rounded-2xl overflow-hidden mb-6 relative h-64">
                 <img src="https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?q=80&w=1000&auto=format&fit=crop" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" alt="Drain Cleaning" />
                 <div className="absolute bottom-4 left-4 bg-white w-14 h-14 rounded-2xl flex items-center justify-center shadow-lg">
@@ -188,9 +200,11 @@ export default function Home() {
                 </span>
               </a>
             </div>
+            </Reveal>
 
             {/* Card 3 */}
-            <div className="bg-[#f8f9f8] rounded-3xl p-6 flex flex-col group">
+            <Reveal direction="up" delay={0.4} className="h-full">
+            <div className="bg-[#f8f9f8] rounded-3xl p-6 flex flex-col group h-full">
               <div className="rounded-2xl overflow-hidden mb-6 relative h-64">
                 <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?q=80&w=1000&auto=format&fit=crop" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" alt="Water Heater Repair" />
                 <div className="absolute bottom-4 left-4 bg-white w-14 h-14 rounded-2xl flex items-center justify-center shadow-lg">
@@ -208,9 +222,11 @@ export default function Home() {
                 </span>
               </a>
             </div>
+            </Reveal>
 
             {/* Card 4 */}
-            <div className="bg-[#f8f9f8] rounded-3xl p-6 flex flex-col group">
+            <Reveal direction="up" delay={0.2} className="h-full">
+            <div className="bg-[#f8f9f8] rounded-3xl p-6 flex flex-col group h-full">
               <div className="rounded-2xl overflow-hidden mb-6 relative h-64">
                 <img src="https://images.unsplash.com/photo-1505798577917-a65157d3320a?q=80&w=1000&auto=format&fit=crop" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" alt="Pipe Installation" />
                 <div className="absolute bottom-4 left-4 bg-white w-14 h-14 rounded-2xl flex items-center justify-center shadow-lg">
@@ -228,9 +244,11 @@ export default function Home() {
                 </span>
               </a>
             </div>
+            </Reveal>
 
             {/* Card 5 */}
-            <div className="bg-[#f8f9f8] rounded-3xl p-6 flex flex-col group">
+            <Reveal direction="up" delay={0.3} className="h-full">
+            <div className="bg-[#f8f9f8] rounded-3xl p-6 flex flex-col group h-full">
               <div className="rounded-2xl overflow-hidden mb-6 relative h-64">
                 <img src="https://images.unsplash.com/photo-1620626011761-996317b8d101?q=80&w=1000&auto=format&fit=crop" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" alt="Bathroom Plumbing" />
                 <div className="absolute bottom-4 left-4 bg-white w-14 h-14 rounded-2xl flex items-center justify-center shadow-lg">
@@ -248,9 +266,11 @@ export default function Home() {
                 </span>
               </a>
             </div>
+            </Reveal>
 
             {/* Card 6 */}
-            <div className="bg-[#f8f9f8] rounded-3xl p-6 flex flex-col group">
+            <Reveal direction="up" delay={0.4} className="h-full">
+            <div className="bg-[#f8f9f8] rounded-3xl p-6 flex flex-col group h-full">
               <div className="rounded-2xl overflow-hidden mb-6 relative h-64">
                 <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?q=80&w=1000&auto=format&fit=crop" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" alt="Emergency Plumbing" />
                 <div className="absolute bottom-4 left-4 bg-white w-14 h-14 rounded-2xl flex items-center justify-center shadow-lg">
@@ -268,14 +288,14 @@ export default function Home() {
                 </span>
               </a>
             </div>
+            </Reveal>
           </div>
         </div>
-        </Reveal>
       </section>
       {/* Why Choose Us Section */}
       <section id="about" className="py-24 px-6 lg:px-20 bg-[#f8f9f8]">
-        <Reveal direction="up" delay={0.2} className="w-full h-full">
         <div className="max-w-7xl mx-auto flex flex-col items-center text-center">
+          <Reveal direction="up" delay={0.1}>
           <div className="mb-16 max-w-3xl">
             <p className="text-[#ff4f14] font-semibold tracking-wider uppercase mb-4">Why Choose Us</p>
             <h2 className="text-5xl font-bold mb-6 text-[#131312]">
@@ -285,10 +305,12 @@ export default function Home() {
               We combine expert craftsmanship, quality materials, and exceptional customer care to deliver plumbing services you can trust.
             </p>
           </div>
+          </Reveal>
 
           <div className="grid lg:grid-cols-3 gap-6 w-full">
             {/* Left Cards */}
-            <div className="flex flex-col gap-6">
+            <Reveal direction="left" delay={0.2}>
+            <div className="flex flex-col gap-6 h-full">
               <div className="bg-[#ff4f14] text-white rounded-3xl p-8 flex-1 text-left flex flex-col justify-center">
                 <div className="bg-white/20 w-16 h-16 rounded-2xl flex items-center justify-center mb-6">
                   <ShieldCheck size={32} className="text-white" />
@@ -308,8 +330,10 @@ export default function Home() {
                 </p>
               </div>
             </div>
+            </Reveal>
 
             {/* Middle Image */}
+            <Reveal direction="up" delay={0.3}>
             <div className="rounded-3xl overflow-hidden h-[600px] lg:h-auto relative">
               <img 
                 src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?q=80&w=800&auto=format&fit=crop" 
@@ -317,9 +341,11 @@ export default function Home() {
                 className="w-full h-full object-cover"
               />
             </div>
+            </Reveal>
 
             {/* Right Cards */}
-            <div className="flex flex-col gap-6">
+            <Reveal direction="right" delay={0.4}>
+            <div className="flex flex-col gap-6 h-full">
               <div className="bg-white rounded-3xl p-8 flex-1 text-left flex flex-col justify-center">
                 <div className="bg-[#f8f9f8] w-16 h-16 rounded-2xl flex items-center justify-center mb-6">
                   <Award size={32} className="text-[#ff4f14]" />
@@ -339,14 +365,14 @@ export default function Home() {
                 </p>
               </div>
             </div>
+            </Reveal>
           </div>
         </div>
-        </Reveal>
       </section>
 
       {/* Video Block */}
       <section className="px-6 lg:px-20 pb-24 bg-[#f8f9f8]">
-        <Reveal direction="up" delay={0.2} className="w-full h-full">
+        <Reveal direction="up" delay={0.2}>
         <div className="max-w-7xl mx-auto rounded-[2rem] overflow-hidden relative h-[500px] md:h-[600px] group cursor-pointer">
           <img 
             src="https://images.unsplash.com/photo-1542013936693-884638332954?q=80&w=1600&auto=format&fit=crop" 
@@ -364,8 +390,8 @@ export default function Home() {
 
       {/* How It Works Section */}
       <section className="py-24 px-6 lg:px-20 bg-white">
-        <Reveal direction="up" delay={0.2} className="w-full h-full">
         <div className="max-w-7xl mx-auto text-center">
+          <Reveal direction="up" delay={0.1}>
           <div className="mb-16">
             <p className="text-[#ff4f14] font-semibold tracking-wider uppercase mb-4">How It Works</p>
             <h2 className="text-5xl font-bold mb-6 text-[#131312]">
@@ -375,12 +401,14 @@ export default function Home() {
               From the first call to the final fix - our process is designed to be easy, transparent, and hassle-free.
             </p>
           </div>
+          </Reveal>
 
           <div className="grid md:grid-cols-4 gap-8 relative">
             {/* Connecting Line */}
             <div className="hidden md:block absolute top-12 left-[10%] right-[10%] h-0.5 bg-gray-200 z-0"></div>
 
             {/* Step 1 */}
+            <Reveal direction="up" delay={0.2}>
             <div className="relative z-10 flex flex-col items-center">
               <div className="w-24 h-24 bg-white rounded-full border-[6px] border-[#f8f9f8] flex items-center justify-center shadow-lg mb-6">
                 <Calendar size={32} className="text-[#ff4f14]" />
@@ -390,8 +418,10 @@ export default function Home() {
                 Book an appointment online or give us a call.
               </p>
             </div>
+            </Reveal>
 
             {/* Step 2 */}
+            <Reveal direction="up" delay={0.3}>
             <div className="relative z-10 flex flex-col items-center">
               <div className="w-24 h-24 bg-[#ff4f14] text-white rounded-full border-[6px] border-[#ffece6] flex items-center justify-center shadow-lg mb-6">
                 <Search size={32} />
@@ -401,8 +431,10 @@ export default function Home() {
                 Our licensed plumber identifies the problem and explains the solution.
               </p>
             </div>
+            </Reveal>
 
             {/* Step 3 */}
+            <Reveal direction="up" delay={0.4}>
             <div className="relative z-10 flex flex-col items-center">
               <div className="w-24 h-24 bg-white rounded-full border-[6px] border-[#f8f9f8] flex items-center justify-center shadow-lg mb-6">
                 <Wrench size={32} className="text-[#ff4f14]" />
@@ -412,8 +444,10 @@ export default function Home() {
                 We complete the work using quality materials and proven techniques.
               </p>
             </div>
+            </Reveal>
 
             {/* Step 4 */}
+            <Reveal direction="up" delay={0.5}>
             <div className="relative z-10 flex flex-col items-center">
               <div className="w-24 h-24 bg-white rounded-full border-[6px] border-[#f8f9f8] flex items-center justify-center shadow-lg mb-6">
                 <ShieldCheck size={32} className="text-[#ff4f14]" />
@@ -423,15 +457,15 @@ export default function Home() {
                 Your plumbing is working properly, backed by reliable service.
               </p>
             </div>
+            </Reveal>
           </div>
         </div>
-        </Reveal>
       </section>
 
       {/* Emergency CTA */}
       <section className="bg-[#ff4f14] py-16 px-6 lg:px-20 text-white overflow-hidden relative">
-        <Reveal direction="up" delay={0.2} className="w-full h-full">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between relative z-10">
+          <Reveal direction="left" delay={0.2}>
           <div className="max-w-2xl mb-8 md:mb-0">
             <div className="inline-flex items-center gap-2 bg-white/20 rounded-full px-4 py-2 mb-6">
               <Siren size={20} />
@@ -449,7 +483,9 @@ export default function Home() {
               <ArrowRight size={20} />
             </button>
           </div>
+          </Reveal>
           
+          <Reveal direction="right" delay={0.4}>
           <div className="relative w-72 h-72 hidden md:block">
             <div className="absolute inset-0 bg-white/10 rounded-full scale-110"></div>
             <img 
@@ -458,14 +494,14 @@ export default function Home() {
               className="w-full h-full object-cover rounded-full border-8 border-[#ff4f14]"
             />
           </div>
+          </Reveal>
         </div>
-        </Reveal>
       </section>
 
       {/* Featured Projects Section */}
       <section className="py-24 px-6 lg:px-20 bg-white">
-        <Reveal direction="up" delay={0.2} className="w-full h-full">
         <div className="max-w-7xl mx-auto">
+          <Reveal direction="up" delay={0.1}>
           <div className="mb-16 max-w-2xl">
             <p className="text-[#ff4f14] font-semibold tracking-wider uppercase mb-4">Featured Projects</p>
             <h2 className="text-5xl font-bold mb-6 text-[#131312]">
@@ -475,20 +511,26 @@ export default function Home() {
               Take a look at the plumbing solutions we've completed, from everyday repairs to full installations, all delivered with care and precision.
             </p>
           </div>
+          </Reveal>
           
           <div className="grid md:grid-cols-3 gap-6">
+            <Reveal direction="up" delay={0.2} className="h-full">
             <div className="rounded-3xl overflow-hidden h-80 group relative">
               <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?q=80&w=800&auto=format&fit=crop" alt="Project 1" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
             </div>
+            </Reveal>
+            <Reveal direction="up" delay={0.2} className="h-full">
             <div className="rounded-3xl overflow-hidden h-80 group relative">
               <img src="https://images.unsplash.com/photo-1620626011761-996317b8d101?q=80&w=800&auto=format&fit=crop" alt="Project 2" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
             </div>
+            </Reveal>
+            <Reveal direction="up" delay={0.2} className="h-full">
             <div className="rounded-3xl overflow-hidden h-80 group relative">
               <img src="https://images.unsplash.com/photo-1607472586893-edb57cb5b3b1?q=80&w=800&auto=format&fit=crop" alt="Project 3" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
             </div>
+            </Reveal>
           </div>
         </div>
-        </Reveal>
       </section>
 
       {/* Footer */}
