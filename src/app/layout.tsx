@@ -7,6 +7,8 @@ const plusJakartaSans = Plus_Jakarta_Sans({
   subsets: ["latin"],
 });
 
+import SmoothScroll from "@/components/SmoothScroll";
+
 export const metadata: Metadata = {
   title: "Plumbzo – High Converting Plumbing & Home Services",
   description: "Plumbing services built around you.",
@@ -22,7 +24,7 @@ export default function RootLayout({
       <body
         className={`${plusJakartaSans.variable} antialiased text-[#131312] bg-[#f8f9f8]`}
       >
-        {children}
+        <SmoothScroll>{children}</SmoothScroll>
       </body>
     </html>
   );

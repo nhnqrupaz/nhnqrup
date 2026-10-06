@@ -17,6 +17,7 @@ import {
   CheckCircle2
 } from "lucide-react";
 import Link from "next/link";
+import Reveal from "@/components/Reveal";
 
 export default function Home() {
   return (
@@ -47,6 +48,7 @@ export default function Home() {
 
       {/* Hero Section */}
       <section className="relative pt-40 pb-32 px-6 lg:px-20 min-h-[90vh] flex items-center">
+        <Reveal direction="up" delay={0.2} className="w-full h-full">
         {/* Background Image (Using placeholder) */}
         <div className="absolute inset-0 z-0">
           <img 
@@ -104,10 +106,12 @@ export default function Home() {
             </div>
           </div>
         </div>
+        </Reveal>
       </section>
 
       {/* Stats Section */}
       <section className="bg-[#ff4f14] py-16 px-6 lg:px-20 text-white">
+        <Reveal direction="up" delay={0.2} className="w-full h-full">
         <div className="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-8 divide-x divide-white/20 text-center">
           <div>
             <div className="text-5xl font-bold mb-2">10+</div>
@@ -126,10 +130,12 @@ export default function Home() {
             <div className="text-white/90">Emergency Support</div>
           </div>
         </div>
+        </Reveal>
       </section>
 
       {/* Services Section */}
       <section id="services" className="py-24 px-6 lg:px-20 bg-white">
+        <Reveal direction="up" delay={0.2} className="w-full h-full">
         <div className="max-w-7xl mx-auto">
           <div className="mb-16 max-w-2xl">
             <p className="text-[#ff4f14] font-semibold tracking-wider uppercase mb-4">Our Services</p>
@@ -264,9 +270,11 @@ export default function Home() {
             </div>
           </div>
         </div>
+        </Reveal>
       </section>
       {/* Why Choose Us Section */}
       <section id="about" className="py-24 px-6 lg:px-20 bg-[#f8f9f8]">
+        <Reveal direction="up" delay={0.2} className="w-full h-full">
         <div className="max-w-7xl mx-auto flex flex-col items-center text-center">
           <div className="mb-16 max-w-3xl">
             <p className="text-[#ff4f14] font-semibold tracking-wider uppercase mb-4">Why Choose Us</p>
@@ -333,10 +341,12 @@ export default function Home() {
             </div>
           </div>
         </div>
+        </Reveal>
       </section>
 
       {/* Video Block */}
       <section className="px-6 lg:px-20 pb-24 bg-[#f8f9f8]">
+        <Reveal direction="up" delay={0.2} className="w-full h-full">
         <div className="max-w-7xl mx-auto rounded-[2rem] overflow-hidden relative h-[500px] md:h-[600px] group cursor-pointer">
           <img 
             src="https://images.unsplash.com/photo-1542013936693-884638332954?q=80&w=1600&auto=format&fit=crop" 
@@ -349,10 +359,12 @@ export default function Home() {
             </div>
           </div>
         </div>
+        </Reveal>
       </section>
 
       {/* How It Works Section */}
       <section className="py-24 px-6 lg:px-20 bg-white">
+        <Reveal direction="up" delay={0.2} className="w-full h-full">
         <div className="max-w-7xl mx-auto text-center">
           <div className="mb-16">
             <p className="text-[#ff4f14] font-semibold tracking-wider uppercase mb-4">How It Works</p>
@@ -413,10 +425,12 @@ export default function Home() {
             </div>
           </div>
         </div>
+        </Reveal>
       </section>
 
       {/* Emergency CTA */}
       <section className="bg-[#ff4f14] py-16 px-6 lg:px-20 text-white overflow-hidden relative">
+        <Reveal direction="up" delay={0.2} className="w-full h-full">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between relative z-10">
           <div className="max-w-2xl mb-8 md:mb-0">
             <div className="inline-flex items-center gap-2 bg-white/20 rounded-full px-4 py-2 mb-6">
@@ -445,10 +459,12 @@ export default function Home() {
             />
           </div>
         </div>
+        </Reveal>
       </section>
 
       {/* Featured Projects Section */}
       <section className="py-24 px-6 lg:px-20 bg-white">
+        <Reveal direction="up" delay={0.2} className="w-full h-full">
         <div className="max-w-7xl mx-auto">
           <div className="mb-16 max-w-2xl">
             <p className="text-[#ff4f14] font-semibold tracking-wider uppercase mb-4">Featured Projects</p>
@@ -472,6 +488,7 @@ export default function Home() {
             </div>
           </div>
         </div>
+        </Reveal>
       </section>
 
       {/* Footer */}
