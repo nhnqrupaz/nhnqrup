@@ -18,12 +18,18 @@ export default function SmoothScroll({ children }: { children: ReactNode }) {
     function raf(time: number) {
       lenis.raf(time);
       requestAnimationFrame(raf);
+    // @ts-ignore
+    window.lenis = lenis;
     }
 
     requestAnimationFrame(raf);
+    // @ts-ignore
+    window.lenis = lenis;
 
     return () => {
       lenis.destroy();
+      // @ts-ignore
+      window.lenis = undefined;
     };
   }, []);
 
