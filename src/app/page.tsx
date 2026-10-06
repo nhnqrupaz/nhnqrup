@@ -31,7 +31,7 @@ export default function Home() {
             {/* Navigation */}
       
       {/* Hero Section */}
-      <section className="relative pt-40 pb-32 px-6 lg:px-20 min-h-[90vh] flex items-center">
+      <section className="relative pt-32 pb-24 md:pt-40 md:pb-32 px-6 lg:px-20 min-h-[90vh] flex items-center">
         {/* Background Image (Using placeholder) */}
         <div className="absolute inset-0 z-0">
           <img 
@@ -44,12 +44,12 @@ export default function Home() {
         </div>
 
         <div className="relative z-10 max-w-3xl text-white">
-          <div className="inline-flex items-center gap-2 border border-[#ff4f14] bg-[#ff4f14]/80 rounded-full px-3 md:px-5 py-0.5 md:py-1 mb-6 backdrop-blur-sm">
+          <div className="inline-flex items-center gap-2 border border-[#ff4f14] bg-[#ff4f14]/80 rounded-full px-3 md:px-5 py-0.5 md:py-1 mb-4 md:mb-6 backdrop-blur-sm">
             <span className="text-xs md:text-sm font-medium">7/24 Peşəkar Elektrik və Generator Servisi</span>
           </div>
           
           <Reveal direction="up" delay={0.1}>
-          <h1 className="text-4xl md:text-6xl font-bold leading-[1.1] mb-6">
+          <h1 className="text-3xl md:text-6xl font-bold leading-[1.1] mb-4 md:mb-6">
             NHN QRUP<br /><span className="text-[#ff4f14]">Servis və Təlimlər</span>
           </h1>
           </Reveal>
@@ -70,29 +70,29 @@ export default function Home() {
       </section>
 
       {/* Stats Section */}
-      <section className="bg-[#ff4f14] py-8 md:py-16 px-6 lg:px-20 text-white">
+      <section className="bg-[#ff4f14] py-8 md:py-12 md:py-16 px-6 lg:px-20 text-white">
         <div className="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-8 divide-x divide-white/20 text-center">
           <Reveal direction="up" delay={0.1}>
           <div>
-            <div className="text-4xl md:text-5xl font-bold mb-2"><NumberCounter end={10} suffix="+" /></div>
+            <div className="text-4xl md:text-3xl md:text-5xl font-bold mb-2"><NumberCounter end={10} suffix="+" /></div>
             <div className="text-white/90">İllik Təcrübə</div>
           </div>
           </Reveal>
           <Reveal direction="up" delay={0.2}>
           <div>
-            <div className="text-4xl md:text-5xl font-bold mb-2"><NumberCounter end={500} suffix="+" /></div>
+            <div className="text-4xl md:text-3xl md:text-5xl font-bold mb-2"><NumberCounter end={500} suffix="+" /></div>
             <div className="text-white/90">Məzun və Tələbə</div>
           </div>
           </Reveal>
           <Reveal direction="up" delay={0.3}>
           <div>
-            <div className="text-4xl md:text-5xl font-bold mb-2"><NumberCounter end={98} suffix="%" /></div>
+            <div className="text-4xl md:text-3xl md:text-5xl font-bold mb-2"><NumberCounter end={98} suffix="%" /></div>
             <div className="text-white/90">Müştəri Məmnuniyyəti</div>
           </div>
           </Reveal>
           <Reveal direction="up" delay={0.4}>
           <div>
-            <div className="text-4xl md:text-5xl font-bold mb-2">24/7</div>
+            <div className="text-4xl md:text-3xl md:text-5xl font-bold mb-2">24/7</div>
             <div className="text-white/90">Texniki Dəstək</div>
           </div>
           </Reveal>
@@ -100,12 +100,12 @@ export default function Home() {
       </section>
 
       {/* Ana Səhifə Bölmələri (Kurslar, Servis, Vakansiyalar) */}
-      <section className="py-24 px-6 lg:px-20 bg-white">
+      <section className="py-16 md:py-24 px-6 lg:px-20 bg-white">
         <div className="max-w-7xl mx-auto">
           <Reveal direction="up" delay={0.1}>
-          <div className="mb-16 max-w-2xl">
+          <div className="mb-10 md:mb-16 max-w-2xl">
             <p className="text-[#ff4f14] font-semibold tracking-wider uppercase mb-4">Fəaliyyət Sahələrimiz</p>
-            <h2 className="text-5xl font-bold mb-6 text-[#131312]">
+            <h2 className="text-3xl md:text-5xl font-bold mb-4 md:mb-6 text-[#131312]">
               Professional <span className="text-[#ff4f14]">Təlimlər və Servis</span>
             </h2>
             <p className="text-lg text-gray-600 leading-relaxed">
@@ -117,11 +117,11 @@ export default function Home() {
           <div className="grid md:grid-cols-3 gap-8">
             <Reveal direction="up" delay={0.2} className="h-full">
             <div className="bg-[#f8f9f8] rounded-3xl p-8 flex flex-col group h-full border border-gray-100 hover:shadow-lg transition-all">
-              <div className="w-16 h-16 bg-white rounded-2xl flex items-center justify-center mb-6 shadow-sm">
+              <div className="w-16 h-16 bg-white rounded-2xl flex items-center justify-center mb-4 md:mb-6 shadow-sm">
                 <Lightbulb size={32} className="text-[#ff4f14]" />
               </div>
               <h3 className="text-2xl font-bold mb-4">Peşəkar Kurslar</h3>
-              <p className="text-gray-600 mb-8 flex-grow">
+              <p className="text-gray-600 mb-4 md:mb-6 md:mb-8 flex-grow">
                 Elektrik, Ağıllı Ev, PLC və Zəif Axın sistemləri üzrə praktiki dərslər və rəsmi sertifikatlar.
               </p>
               <Link href="/courses" className="inline-flex items-center gap-2 font-bold hover:text-[#ff4f14] transition-colors">
@@ -132,11 +132,11 @@ export default function Home() {
 
             <Reveal direction="up" delay={0.3} className="h-full">
             <div className="bg-[#f8f9f8] rounded-3xl p-8 flex flex-col group h-full border border-gray-100 hover:shadow-lg transition-all">
-              <div className="w-16 h-16 bg-[#ff4f14] text-white rounded-2xl flex items-center justify-center mb-6 shadow-sm">
+              <div className="w-16 h-16 bg-[#ff4f14] text-white rounded-2xl flex items-center justify-center mb-4 md:mb-6 shadow-sm">
                 <Wrench size={32} />
               </div>
               <h3 className="text-2xl font-bold mb-4">Mühəndislik Servisi</h3>
-              <p className="text-gray-600 mb-8 flex-grow">
+              <p className="text-gray-600 mb-4 md:mb-6 md:mb-8 flex-grow">
                 Generatorlar və elektrik sistemləri üçün 7/24 operativ diaqnostika, təmir və texniki baxış.
               </p>
               <Link href="/services" className="inline-flex items-center gap-2 font-bold hover:text-[#ff4f14] transition-colors">
@@ -147,11 +147,11 @@ export default function Home() {
 
             <Reveal direction="up" delay={0.4} className="h-full">
             <div className="bg-[#f8f9f8] rounded-3xl p-8 flex flex-col group h-full border border-gray-100 hover:shadow-lg transition-all">
-              <div className="w-16 h-16 bg-white rounded-2xl flex items-center justify-center mb-6 shadow-sm">
+              <div className="w-16 h-16 bg-white rounded-2xl flex items-center justify-center mb-4 md:mb-6 shadow-sm">
                 <Briefcase size={32} className="text-[#ff4f14]" />
               </div>
               <h3 className="text-2xl font-bold mb-4">Aktiv Vakansiyalar</h3>
-              <p className="text-gray-600 mb-8 flex-grow">
+              <p className="text-gray-600 mb-4 md:mb-6 md:mb-8 flex-grow">
                 Komandamıza qoşulmaq, karyeranızı bizimlə qurmaq və inkişaf etmək üçün açıq iş yerləri.
               </p>
               <Link href="/vacancies" className="inline-flex items-center gap-2 font-bold hover:text-[#ff4f14] transition-colors">
@@ -164,12 +164,12 @@ export default function Home() {
       </section>
 
       {/* Niyə Bizi Seçməlisiniz Section */}
-      <section id="about" className="py-24 px-6 lg:px-20 bg-[#f8f9f8]">
+      <section id="about" className="py-16 md:py-24 px-6 lg:px-20 bg-[#f8f9f8]">
         <div className="max-w-7xl mx-auto flex flex-col items-center text-center">
           <Reveal direction="up" delay={0.1}>
-          <div className="mb-16 max-w-3xl">
+          <div className="mb-10 md:mb-16 max-w-3xl">
             <p className="text-[#ff4f14] font-semibold tracking-wider uppercase mb-4">Niyə Bizi Seçməlisiniz</p>
-            <h2 className="text-5xl font-bold mb-6 text-[#131312]">
+            <h2 className="text-3xl md:text-5xl font-bold mb-4 md:mb-6 text-[#131312]">
               Niyə Məhz <span className="text-[#ff4f14]">NHN QRUP?</span>
             </h2>
             <p className="text-lg text-gray-600 leading-relaxed max-w-2xl mx-auto">
@@ -183,7 +183,7 @@ export default function Home() {
             <Reveal direction="left" delay={0.2}>
             <div className="flex flex-col gap-6 h-full">
               <div className="bg-[#ff4f14] text-white rounded-3xl p-8 flex-1 text-left flex flex-col justify-center">
-                <div className="bg-white/20 w-16 h-16 rounded-2xl flex items-center justify-center mb-6">
+                <div className="bg-white/20 w-16 h-16 rounded-2xl flex items-center justify-center mb-4 md:mb-6">
                   <ShieldCheck size={32} className="text-white" />
                 </div>
                 <h3 className="text-2xl font-bold mb-4">Rəsmi və Zəmanətli</h3>
@@ -192,7 +192,7 @@ export default function Home() {
                 </p>
               </div>
               <div className="bg-white rounded-3xl p-8 flex-1 text-left flex flex-col justify-center">
-                <div className="bg-[#f8f9f8] w-16 h-16 rounded-2xl flex items-center justify-center mb-6">
+                <div className="bg-[#f8f9f8] w-16 h-16 rounded-2xl flex items-center justify-center mb-4 md:mb-6">
                   <Clock size={32} className="text-[#ff4f14]" />
                 </div>
                 <h3 className="text-2xl font-bold mb-4">Operativ Texniki Servis</h3>
@@ -218,7 +218,7 @@ export default function Home() {
             <Reveal direction="right" delay={0.4}>
             <div className="flex flex-col gap-6 h-full">
               <div className="bg-white rounded-3xl p-8 flex-1 text-left flex flex-col justify-center">
-                <div className="bg-[#f8f9f8] w-16 h-16 rounded-2xl flex items-center justify-center mb-6">
+                <div className="bg-[#f8f9f8] w-16 h-16 rounded-2xl flex items-center justify-center mb-4 md:mb-6">
                   <Award size={32} className="text-[#ff4f14]" />
                 </div>
                 <h3 className="text-2xl font-bold mb-4">Peşəkar Təlimçilər</h3>
@@ -227,7 +227,7 @@ export default function Home() {
                 </p>
               </div>
               <div className="bg-white rounded-3xl p-8 flex-1 text-left flex flex-col justify-center">
-                <div className="bg-[#f8f9f8] w-16 h-16 rounded-2xl flex items-center justify-center mb-6">
+                <div className="bg-[#f8f9f8] w-16 h-16 rounded-2xl flex items-center justify-center mb-4 md:mb-6">
                   <Headphones size={32} className="text-[#ff4f14]" />
                 </div>
                 <h3 className="text-2xl font-bold mb-4">Sonda Rəsmi Sertifikat</h3>
@@ -255,12 +255,12 @@ export default function Home() {
       </section>
 
       {/* Necə İşləyirik? Section */}
-      <section className="py-24 px-6 lg:px-20 bg-white">
+      <section className="py-16 md:py-24 px-6 lg:px-20 bg-white">
         <div className="max-w-7xl mx-auto text-center">
           <Reveal direction="up" delay={0.1}>
-          <div className="mb-16">
+          <div className="mb-10 md:mb-16">
             <p className="text-[#ff4f14] font-semibold tracking-wider uppercase mb-4">Necə İşləyirik?</p>
-            <h2 className="text-5xl font-bold mb-6 text-[#131312]">
+            <h2 className="text-3xl md:text-5xl font-bold mb-4 md:mb-6 text-[#131312]">
               Peşəkar <span className="text-[#ff4f14]">Həll Yolları</span>
             </h2>
             <p className="text-lg text-gray-600 leading-relaxed max-w-2xl mx-auto">
@@ -276,7 +276,7 @@ export default function Home() {
             {/* Step 1 */}
             <Reveal direction="up" delay={0.2}>
             <div className="relative z-10 flex flex-col items-center">
-              <div className="w-24 h-24 bg-white rounded-full border-[6px] border-[#f8f9f8] flex items-center justify-center shadow-lg mb-6">
+              <div className="w-24 h-24 bg-white rounded-full border-[6px] border-[#f8f9f8] flex items-center justify-center shadow-lg mb-4 md:mb-6">
                 <Calendar size={32} className="text-[#ff4f14]" />
               </div>
               <h3 className="text-xl font-bold mb-3">Müraciət</h3>
@@ -289,7 +289,7 @@ export default function Home() {
             {/* Step 2 */}
             <Reveal direction="up" delay={0.3}>
             <div className="relative z-10 flex flex-col items-center">
-              <div className="w-24 h-24 bg-[#ff4f14] text-white rounded-full border-[6px] border-[#ffece6] flex items-center justify-center shadow-lg mb-6">
+              <div className="w-24 h-24 bg-[#ff4f14] text-white rounded-full border-[6px] border-[#ffece6] flex items-center justify-center shadow-lg mb-4 md:mb-6">
                 <Search size={32} />
               </div>
               <h3 className="text-xl font-bold mb-3">Diaqnostika / Baxış</h3>
@@ -302,7 +302,7 @@ export default function Home() {
             {/* Step 3 */}
             <Reveal direction="up" delay={0.4}>
             <div className="relative z-10 flex flex-col items-center">
-              <div className="w-24 h-24 bg-white rounded-full border-[6px] border-[#f8f9f8] flex items-center justify-center shadow-lg mb-6">
+              <div className="w-24 h-24 bg-white rounded-full border-[6px] border-[#f8f9f8] flex items-center justify-center shadow-lg mb-4 md:mb-6">
                 <Wrench size={32} className="text-[#ff4f14]" />
               </div>
               <h3 className="text-xl font-bold mb-3">Praktika və Həll</h3>
@@ -315,7 +315,7 @@ export default function Home() {
             {/* Step 4 */}
             <Reveal direction="up" delay={0.5}>
             <div className="relative z-10 flex flex-col items-center">
-              <div className="w-24 h-24 bg-white rounded-full border-[6px] border-[#f8f9f8] flex items-center justify-center shadow-lg mb-6">
+              <div className="w-24 h-24 bg-white rounded-full border-[6px] border-[#f8f9f8] flex items-center justify-center shadow-lg mb-4 md:mb-6">
                 <ShieldCheck size={32} className="text-[#ff4f14]" />
               </div>
               <h3 className="text-xl font-bold mb-3">Təminat və Nəticə</h3>
@@ -329,18 +329,18 @@ export default function Home() {
       </section>
 
       {/* Emergency CTA */}
-      <section className="bg-[#ff4f14] py-16 px-6 lg:px-20 text-white overflow-hidden relative">
+      <section className="bg-[#ff4f14] py-12 md:py-16 px-6 lg:px-20 text-white overflow-hidden relative">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between relative z-10">
           <Reveal direction="left" delay={0.2}>
-          <div className="max-w-2xl mb-8 md:mb-0">
-            <div className="inline-flex items-center gap-2 bg-white/20 rounded-full px-4 py-2 mb-6">
+          <div className="max-w-2xl mb-4 md:mb-6 md:mb-8 md:mb-0">
+            <div className="inline-flex items-center gap-2 bg-white/20 rounded-full px-4 py-2 mb-4 md:mb-6">
               <Siren size={20} />
               <span className="font-semibold tracking-wide">TƏCİLİ</span>
             </div>
-            <h2 className="text-4xl md:text-5xl font-bold mb-4">
+            <h2 className="text-4xl md:text-3xl md:text-5xl font-bold mb-4">
               Təcili Generator və ya Elektrik Servisi Lazımdır?
             </h2>
-            <div className="flex items-center gap-3 text-xl text-white/90 mb-8">
+            <div className="flex items-center gap-3 text-xl text-white/90 mb-4 md:mb-6 md:mb-8">
               <Clock size={24} />
               <span>7/24 Operativ Texniki Dəstək Xidməti</span>
             </div>
@@ -365,12 +365,12 @@ export default function Home() {
       </section>
 
       {/* Partnyorlarımız Section */}
-      <section className="py-24 px-6 lg:px-20 bg-white">
+      <section className="py-16 md:py-24 px-6 lg:px-20 bg-white">
         <div className="max-w-7xl mx-auto">
           <Reveal direction="up" delay={0.1}>
-          <div className="mb-16 max-w-2xl">
+          <div className="mb-10 md:mb-16 max-w-2xl">
             <p className="text-[#ff4f14] font-semibold tracking-wider uppercase mb-4">Partnyorlarımız</p>
-            <h2 className="text-5xl font-bold mb-6 text-[#131312]">
+            <h2 className="text-3xl md:text-5xl font-bold mb-4 md:mb-6 text-[#131312]">
               Bizə Güvənən <span className="text-[#ff4f14]">Şirkətlər</span>
             </h2>
             <p className="text-lg text-gray-600 leading-relaxed">
