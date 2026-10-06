@@ -36,7 +36,7 @@ export default function Home() {
         <div className="absolute inset-0 z-0">
           <img 
             src="https://images.unsplash.com/photo-1585704032915-c3400ca199e7?q=80&w=3270&auto=format&fit=crop" 
-            alt="Hero Plumbing" 
+            alt="Hero Background" 
             className="w-full h-full object-cover"
           />
           {/* Light overlay to match design text readability on left side */}
@@ -44,13 +44,13 @@ export default function Home() {
         </div>
 
         <div className="relative z-10 max-w-3xl text-white">
-          <div className="inline-flex items-center gap-2 border border-white/30 rounded-full px-4 py-1.5 mb-6 backdrop-blur-sm">
-            <span className="text-sm font-medium">Available 24/7 Every Day</span>
+          <div className="inline-flex items-center gap-2 border border-[#ff4f14] bg-[#ff4f14]/80 rounded-full px-5 py-1 mb-6 backdrop-blur-sm">
+            <span className="text-sm font-medium">7/24 Peşəkar Elektrik və Generator Servisi</span>
           </div>
           
           <Reveal direction="up" delay={0.1}>
-          <h1 className="text-5xl md:text-7xl font-bold leading-[1.1] mb-6">
-            Fast, NHN QRUP (NHN GROUP)<br />Service and Training
+          <h1 className="text-4xl md:text-6xl font-bold leading-[1.1] mb-6">
+            NHN QRUP<br /><span className="text-[#ff4f14]">Service and Training</span>
           </h1>
           </Reveal>
           
@@ -61,32 +61,10 @@ export default function Home() {
           </Reveal>
           
           <div className="flex flex-wrap items-center gap-4 mb-12">
-            
             <Link href="/contact" className="bg-[#ff4f14] text-white px-8 py-4 rounded-full font-bold text-lg inline-flex items-center gap-2 hover:bg-[#e64612] transition-colors">
               <Phone size={20} />
               Bizə Zəng Edin
             </Link>
-          </div>
-
-          <div className="flex items-center gap-4">
-            <div className="flex -space-x-3">
-              {[1, 2, 3, 4].map((i) => (
-                <img 
-                  key={i}
-                  src={`https://i.pravatar.cc/100?img=${i + 10}`} 
-                  alt="Reviewer" 
-                  className="w-12 h-12 rounded-full border-2 border-white object-cover"
-                />
-              ))}
-            </div>
-            <div>
-              <div className="flex gap-1 text-white mb-1">
-                {[1, 2, 3, 4, 5].map((i) => (
-                  <Star key={i} size={16} fill="currentColor" />
-                ))}
-              </div>
-              <p className="text-sm font-medium text-white/90">4.9+ Reviews</p>
-            </div>
           </div>
         </div>
       </section>
@@ -96,25 +74,25 @@ export default function Home() {
         <div className="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-8 divide-x divide-white/20 text-center">
           <Reveal direction="up" delay={0.1}>
           <div>
-            <div className="text-5xl font-bold mb-2">10+</div>
-            <div className="text-white/90">Years of Experience</div>
+            <div className="text-4xl md:text-5xl font-bold mb-2"><NumberCounter end={10} suffix="+" /></div>
+            <div className="text-white/90">İllik Təcrübə</div>
           </div>
           </Reveal>
           <Reveal direction="up" delay={0.2}>
           <div>
-            <div className="text-5xl font-bold mb-2">2500+</div>
-            <div className="text-white/90">Projects Completed</div>
+            <div className="text-4xl md:text-5xl font-bold mb-2"><NumberCounter end={2500} suffix="+" /></div>
+            <div className="text-white/90">Məzun və Tələbə</div>
           </div>
           </Reveal>
           <Reveal direction="up" delay={0.3}>
           <div>
-            <div className="text-5xl font-bold mb-2">98%</div>
-            <div className="text-white/90">Customer Satisfaction</div>
+            <div className="text-4xl md:text-5xl font-bold mb-2"><NumberCounter end={98} suffix="%" /></div>
+            <div className="text-white/90">Müştəri Məmnuniyyəti</div>
           </div>
           </Reveal>
           <Reveal direction="up" delay={0.4}>
           <div>
-            <div className="text-5xl font-bold mb-2">24/7</div>
+            <div className="text-4xl md:text-5xl font-bold mb-2">24/7</div>
             <div className="text-white/90">Texniki Dəstək</div>
           </div>
           </Reveal>

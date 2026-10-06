@@ -25,7 +25,7 @@ export default function ContactPage() {
                 <Phone size={28} />
               </div>
               <h3 className="font-bold text-lg mb-2">Telefon</h3>
-              <p className="text-gray-600">+994 77 333 44 66</p>
+              <a href="https://wa.me/994773334466" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-[#ff4f14] transition-colors font-medium">+994 77 333 44 66</a>
             </div>
           </Reveal>
           <Reveal direction="up" delay={0.3}>
@@ -34,7 +34,7 @@ export default function ContactPage() {
                 <Mail size={28} />
               </div>
               <h3 className="font-bold text-lg mb-2">E-poçt</h3>
-              <p className="text-gray-600">info@nhnqrup.az</p>
+              <a href="mailto:info@nhnqrup.az" className="text-gray-600 hover:text-[#ff4f14] transition-colors font-medium">info@nhnqrup.az</a>
             </div>
           </Reveal>
           <Reveal direction="up" delay={0.4}>
