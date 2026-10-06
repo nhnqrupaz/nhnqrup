@@ -50,7 +50,7 @@ export default function Home() {
           
           <Reveal direction="up" delay={0.1}>
           <h1 className="text-4xl md:text-6xl font-bold leading-[1.1] mb-5 md:mb-6">
-            NHN QRUP<br /><span className="text-[#ff4f14]">Servis və Təlimlər</span>
+            NHN QRUP<br /><span className="bg-[#ff4f14] text-white px-3 py-1 rounded-xl inline-block mt-2">Servis və Təlimlər</span>
           </h1>
           </Reveal>
           
@@ -70,30 +70,30 @@ export default function Home() {
       </section>
 
       {/* Stats Section */}
-      <section className="bg-[#ff4f14] py-8 md:py-12 md:py-16 px-6 lg:px-20 text-white">
-        <div className="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-8 divide-x divide-white/20 text-center">
+      <section className="bg-[#ff4f14] py-6 md:py-16 px-4 md:px-6 lg:px-20 text-white rounded-3xl md:rounded-none mx-4 md:mx-0 mt-[-30px] md:mt-0 relative z-20 shadow-xl">
+        <div className="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8 divide-x divide-white/20 text-center">
           <Reveal direction="up" delay={0.1}>
           <div>
-            <div className="text-4xl md:text-3xl md:text-5xl font-bold mb-2"><NumberCounter end={10} suffix="+" /></div>
-            <div className="text-white/90">İllik Təcrübə</div>
+            <div className="text-2xl md:text-5xl font-bold mb-1 md:mb-2"><NumberCounter end={10} suffix="+" /></div>
+            <div className="text-xs md:text-base text-white/90">İllik Təcrübə</div>
           </div>
           </Reveal>
           <Reveal direction="up" delay={0.2}>
           <div>
-            <div className="text-4xl md:text-3xl md:text-5xl font-bold mb-2"><NumberCounter end={500} suffix="+" /></div>
-            <div className="text-white/90">Məzun və Tələbə</div>
+            <div className="text-2xl md:text-5xl font-bold mb-1 md:mb-2"><NumberCounter end={500} suffix="+" /></div>
+            <div className="text-xs md:text-base text-white/90">Məzun və Tələbə</div>
           </div>
           </Reveal>
           <Reveal direction="up" delay={0.3}>
           <div>
-            <div className="text-4xl md:text-3xl md:text-5xl font-bold mb-2"><NumberCounter end={98} suffix="%" /></div>
-            <div className="text-white/90">Müştəri Məmnuniyyəti</div>
+            <div className="text-2xl md:text-5xl font-bold mb-1 md:mb-2"><NumberCounter end={98} suffix="%" /></div>
+            <div className="text-xs md:text-base text-white/90">Müştəri Məmnuniyyəti</div>
           </div>
           </Reveal>
           <Reveal direction="up" delay={0.4}>
           <div>
-            <div className="text-4xl md:text-3xl md:text-5xl font-bold mb-2">24/7</div>
-            <div className="text-white/90">Texniki Dəstək</div>
+            <div className="text-2xl md:text-5xl font-bold mb-1 md:mb-2">24/7</div>
+            <div className="text-xs md:text-base text-white/90">Texniki Dəstək</div>
           </div>
           </Reveal>
         </div>
