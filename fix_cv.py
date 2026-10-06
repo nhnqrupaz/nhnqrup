@@ -1,35 +1,22 @@
-'use client';
-import Reveal from "@/components/Reveal";
-import { Upload } from "lucide-react";
-import { useSearchParams } from "next/navigation";
-import { Suspense } from "react";
+import re
 
-export default function CVPage() {
-  return (
-    <div className="flex flex-col min-h-screen bg-[#f8f9f8] pt-32 pb-24">
-      <section className="px-6 lg:px-20 mb-16 text-center max-w-4xl mx-auto">
-        <Reveal direction="up" delay={0.1}>
-          <p className="text-[#ff4f14] font-semibold tracking-wider uppercase mb-4">Müraciət</p>
-          <h1 className="text-5xl md:text-6xl font-bold tracking-tight text-[#131312] mb-6">
-            CV <span className="text-[#ff4f14]">Göndər</span>
-          </h1>
-          <p className="text-lg text-gray-600">
-            NHN QRUP komandasına qoşulmaq üçün öz CV-nizi bizə göndərin. Uyğun vakansiya yarandıqda sizinlə əlaqə saxlayacağıq.
-          </p>
-        </Reveal>
-      </section>
+# In vacancies
+with open('src/app/vacancies/page.tsx', 'r') as f:
+    c = f.read()
 
-      <section className="px-6 lg:px-20 max-w-3xl mx-auto w-full">
-        <Reveal direction="up" delay={0.2}>
-          <div className="bg-white p-8 md:p-12 rounded-[2rem] shadow-sm border border-gray-100">
-            <Suspense fallback={<p>Yüklənir...</p>}><CVForm /></Suspense>
-          </div>
-        </Reveal>
-      </section>
-    </div>
-  );
-}
+c = c.replace('<Link href="/cv"', '<Link href={`/cv?job=${job.title}`}')
 
+with open('src/app/vacancies/page.tsx', 'w') as f:
+    f.write(c)
+
+# In cv page
+with open('src/app/cv/page.tsx', 'r') as f:
+    c = f.read()
+
+if 'useSearchParams' not in c:
+    c = c.replace('import { Upload } from "lucide-react";', 'import { Upload } from "lucide-react";\nimport { useSearchParams } from "next/navigation";\nimport { Suspense } from "react";')
+
+    form_replacement = """
 function CVForm() {
   const searchParams = useSearchParams();
   const job = searchParams.get('job') || '';
@@ -78,3 +65,10 @@ function CVForm() {
     </form>
   );
 }
+"""
+    c = re.sub(r'<form className="space-y-6">.*?</form>', '<Suspense fallback={<p>Yüklənir...</p>}><CVForm /></Suspense>', c, flags=re.DOTALL)
+    c += form_replacement
+
+    with open('src/app/cv/page.tsx', 'w') as f:
+        f.write(c)
+

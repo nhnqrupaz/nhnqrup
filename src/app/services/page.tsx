@@ -1,4 +1,5 @@
 'use client';
+import Link from "next/link";
 import Reveal from "@/components/Reveal";
 import { ArrowRight, CheckCircle2 } from "lucide-react";
 
@@ -32,9 +33,9 @@ export default function ServicesPage() {
                 <li className="flex items-center gap-3"><CheckCircle2 className="text-[#ff4f14]" /> <span>Sonda rəsmi sertifikat</span></li>
                 <li className="flex items-center gap-3"><CheckCircle2 className="text-[#ff4f14]" /> <span>Uyğun iş yerlərinə yönləndirmə</span></li>
               </ul>
-              <button className="bg-[#131312] text-white px-8 py-4 rounded-full font-bold w-fit hover:bg-[#ff4f14] transition-colors flex items-center gap-2">
+              <Link href="/courses" className="bg-[#131312] text-white px-8 py-4 rounded-full font-bold w-fit hover:bg-[#ff4f14] transition-colors flex items-center gap-2">
                 Kurslara Bax <ArrowRight size={20} />
-              </button>
+              </Link>
             </div>
           </div>
         </Reveal>
@@ -53,9 +54,9 @@ export default function ServicesPage() {
                 <li className="flex items-center gap-3"><CheckCircle2 className="text-[#ff4f14]" /> <span>Nasazlıqların diaqnostikası və təmir</span></li>
                 <li className="flex items-center gap-3"><CheckCircle2 className="text-[#ff4f14]" /> <span>Təcili yerində operativ servis</span></li>
               </ul>
-              <button className="bg-[#131312] text-white px-8 py-4 rounded-full font-bold w-fit hover:bg-[#ff4f14] transition-colors flex items-center gap-2">
+              <Link href="/contact" className="bg-[#131312] text-white px-8 py-4 rounded-full font-bold w-fit hover:bg-[#ff4f14] transition-colors flex items-center gap-2">
                 Müraciət Et <ArrowRight size={20} />
-              </button>
+              </Link>
             </div>
           </div>
         </Reveal>

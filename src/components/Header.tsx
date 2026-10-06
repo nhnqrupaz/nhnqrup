@@ -18,14 +18,14 @@ export default function Header() {
 
   return (
     <header className="fixed top-0 w-full z-50 flex justify-center p-6 transition-all duration-300">
-      <div className="bg-white rounded-full px-6 py-4 flex items-center justify-between w-full max-w-5xl shadow-sm">
+      <div className="bg-white rounded-full px-6 py-4 flex items-center justify-between w-full max-w-4xl shadow-sm">
         
         <a href="/" onClick={handleHomeClick} className="flex items-center gap-3 cursor-pointer hover:opacity-80 transition-opacity">
           <img src="/LogoPNG.png" alt="NHN Qrup Logo" className="h-10 w-auto object-contain" />
           <span className="font-black text-xl md:text-2xl tracking-tight text-[#131312]">NHN Qrup</span>
         </a>
         
-        <nav className="hidden lg:flex gap-5 text-[15px] font-medium text-[#131312]">
+        <nav className="hidden lg:flex gap-5 text-[16px] font-medium text-[#131312]">
           <a href="/" onClick={handleHomeClick} className="hover:text-[#ff4f14] transition-colors">Ana Səhifə</a>
           <Link href="/products" className="hover:text-[#ff4f14] transition-colors">Məhsullar</Link>
           <Link href="/services" className="hover:text-[#ff4f14] transition-colors">Xidmətlər</Link>

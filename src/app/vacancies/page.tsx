@@ -1,4 +1,5 @@
 'use client';
+import Link from "next/link";
 import Reveal from "@/components/Reveal";
 import { ArrowRight, Briefcase, MapPin, DollarSign } from "lucide-react";
 
@@ -61,10 +62,10 @@ export default function VacanciesPage() {
                   </p>
                 </div>
                 
-                <button className="shrink-0 bg-[#f8f9f8] text-[#131312] px-8 py-4 rounded-full font-bold group-hover:bg-[#ff4f14] group-hover:text-white transition-colors flex items-center justify-center gap-2">
+                <Link href={`/cv?job=${job.title}`} className="shrink-0 bg-[#f8f9f8] text-[#131312] px-8 py-4 rounded-full font-bold group-hover:bg-[#ff4f14] group-hover:text-white transition-colors flex items-center justify-center gap-2">
                   CV Göndər
                   <ArrowRight size={20} />
-                </button>
+                </Link>
               </div>
             </Reveal>
           ))}

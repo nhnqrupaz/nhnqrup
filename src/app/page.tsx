@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { 
-  Zap, Home as HomeIcon, Monitor, Activity, Cpu, Lightbulb, 
+  Zap, Home as HomeIcon, Monitor, Activity, Cpu, Lightbulb, Briefcase, 
   Phone, 
   Search, 
   Droplets, 
@@ -63,11 +63,11 @@ export default function Home() {
           
           <div className="flex flex-wrap items-center gap-4 mb-12">
             <button className="bg-[#ff4f14] text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-[#e64612] transition-colors">
-              Get Your Free Quote
+              Kurslara Yazıl
             </button>
             <button className="bg-white text-[#131312] px-8 py-4 rounded-full font-semibold text-lg flex items-center gap-2 hover:bg-gray-100 transition-colors">
               <Phone size={20} />
-              Call Now
+              Bizə Zəng Edin
             </button>
           </div>
 
@@ -124,157 +124,70 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Services Section */}
-      <section id="services" className="py-24 px-6 lg:px-20 bg-white">
+      {/* Ana Səhifə Bölmələri (Kurslar, Servis, Vakansiyalar) */}
+      <section className="py-24 px-6 lg:px-20 bg-white">
         <div className="max-w-7xl mx-auto">
           <Reveal direction="up" delay={0.1}>
           <div className="mb-16 max-w-2xl">
-            <p className="text-[#ff4f14] font-semibold tracking-wider uppercase mb-4">Bizim Xidmətlərimiz</p>
+            <p className="text-[#ff4f14] font-semibold tracking-wider uppercase mb-4">Fəaliyyət Sahələrimiz</p>
             <h2 className="text-5xl font-bold mb-6 text-[#131312]">
-              Plumbing Solutions Built <span className="text-[#ff4f14]">Around You</span>
+              Professional <span className="text-[#ff4f14]">Təlimlər və Servis</span>
             </h2>
             <p className="text-lg text-gray-600 leading-relaxed">
-              From quick fixes to full installations, our expert plumbers deliver reliable, 
-              high-quality solutions for your home or business.
+              NHN QRUP olaraq ən müasir texnologiyalarla həm peşəkar kurslar, həm mühəndislik servisləri, həm də karyera imkanları təklif edirik.
             </p>
           </div>
           </Reveal>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {/* Card 1 */}
+          <div className="grid md:grid-cols-3 gap-8">
             <Reveal direction="up" delay={0.2} className="h-full">
-            <div className="bg-[#f8f9f8] rounded-3xl p-6 flex flex-col group h-full">
-              <div className="rounded-2xl overflow-hidden mb-6 relative h-64">
-                <img src="https://images.unsplash.com/photo-1607472586893-edb57cb5b3b1?q=80&w=1000&auto=format&fit=crop" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" alt="Elektrik Kursları" />
-                <div className="absolute bottom-4 left-4 bg-white w-14 h-14 rounded-2xl flex items-center justify-center shadow-lg">
-                  <Search className="text-[#ff4f14]" size={28} />
-                </div>
+            <div className="bg-[#f8f9f8] rounded-3xl p-8 flex flex-col group h-full border border-gray-100 hover:shadow-lg transition-all">
+              <div className="w-16 h-16 bg-white rounded-2xl flex items-center justify-center mb-6 shadow-sm">
+                <Lightbulb size={32} className="text-[#ff4f14]" />
               </div>
-              <h3 className="text-2xl font-bold mb-3">Elektrik Kursları</h3>
+              <h3 className="text-2xl font-bold mb-4">Peşəkar Kurslar</h3>
               <p className="text-gray-600 mb-8 flex-grow">
-                We detect hidden leaks quickly to protect your home, prevent costly water damage, and restore peace of mind with confidence.
+                Elektrik, Ağıllı Ev, PLC və Zəif Axın sistemləri üzrə praktiki dərslər və rəsmi sertifikatlar.
               </p>
-              <a href="#" className="flex items-center justify-between text-[#ff4f14] font-semibold group-hover:text-[#e64612]">
-                Get a Quote
-                <span className="bg-[#ff4f14] text-white w-10 h-10 rounded-full flex items-center justify-center group-hover:bg-[#e64612]">
-                  <ArrowRight size={20} />
-                </span>
-              </a>
+              <Link href="/courses" className="inline-flex items-center gap-2 font-bold hover:text-[#ff4f14] transition-colors">
+                Kurslara Bax <ArrowRight size={20} />
+              </Link>
             </div>
             </Reveal>
 
-            {/* Card 2 */}
             <Reveal direction="up" delay={0.3} className="h-full">
-            <div className="bg-[#f8f9f8] rounded-3xl p-6 flex flex-col group h-full">
-              <div className="rounded-2xl overflow-hidden mb-6 relative h-64">
-                <img src="https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?q=80&w=1000&auto=format&fit=crop" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" alt="Ağıllı Ev (Smart Home)" />
-                <div className="absolute bottom-4 left-4 bg-white w-14 h-14 rounded-2xl flex items-center justify-center shadow-lg">
-                  <Droplets className="text-[#ff4f14]" size={28} />
-                </div>
+            <div className="bg-[#f8f9f8] rounded-3xl p-8 flex flex-col group h-full border border-gray-100 hover:shadow-lg transition-all">
+              <div className="w-16 h-16 bg-[#ff4f14] text-white rounded-2xl flex items-center justify-center mb-6 shadow-sm">
+                <Wrench size={32} />
               </div>
-              <h3 className="text-2xl font-bold mb-3">Ağıllı Ev (Smart Home)</h3>
+              <h3 className="text-2xl font-bold mb-4">Mühəndislik Servisi</h3>
               <p className="text-gray-600 mb-8 flex-grow">
-                We clear stubborn clogs and buildup to keep your drains flowing efficiently and prevent future plumbing problems year after year.
+                Generatorlar və elektrik sistemləri üçün 7/24 operativ diaqnostika, təmir və texniki baxış.
               </p>
-              <a href="#" className="flex items-center justify-between text-[#ff4f14] font-semibold group-hover:text-[#e64612]">
-                Get a Quote
-                <span className="bg-[#ff4f14] text-white w-10 h-10 rounded-full flex items-center justify-center group-hover:bg-[#e64612]">
-                  <ArrowRight size={20} />
-                </span>
-              </a>
+              <Link href="/services" className="inline-flex items-center gap-2 font-bold hover:text-[#ff4f14] transition-colors">
+                Servisə Bax <ArrowRight size={20} />
+              </Link>
             </div>
             </Reveal>
 
-            {/* Card 3 */}
             <Reveal direction="up" delay={0.4} className="h-full">
-            <div className="bg-[#f8f9f8] rounded-3xl p-6 flex flex-col group h-full">
-              <div className="rounded-2xl overflow-hidden mb-6 relative h-64">
-                <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?q=80&w=1000&auto=format&fit=crop" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" alt="Water Heater Repair" />
-                <div className="absolute bottom-4 left-4 bg-white w-14 h-14 rounded-2xl flex items-center justify-center shadow-lg">
-                  <Wrench className="text-[#ff4f14]" size={28} />
-                </div>
+            <div className="bg-[#f8f9f8] rounded-3xl p-8 flex flex-col group h-full border border-gray-100 hover:shadow-lg transition-all">
+              <div className="w-16 h-16 bg-white rounded-2xl flex items-center justify-center mb-6 shadow-sm">
+                <Briefcase size={32} className="text-[#ff4f14]" />
               </div>
-              <h3 className="text-2xl font-bold mb-3">Water Heater Repair</h3>
+              <h3 className="text-2xl font-bold mb-4">Aktiv Vakansiyalar</h3>
               <p className="text-gray-600 mb-8 flex-grow">
-                Enjoy fast reliable water heater repairs that restore consistent hot water for your home with lasting performance and comfort daily.
+                Komandamıza qoşulmaq, karyeranızı bizimlə qurmaq və inkişaf etmək üçün açıq iş yerləri.
               </p>
-              <a href="#" className="flex items-center justify-between text-[#ff4f14] font-semibold group-hover:text-[#e64612]">
-                Get a Quote
-                <span className="bg-[#ff4f14] text-white w-10 h-10 rounded-full flex items-center justify-center group-hover:bg-[#e64612]">
-                  <ArrowRight size={20} />
-                </span>
-              </a>
-            </div>
-            </Reveal>
-
-            {/* Card 4 */}
-            <Reveal direction="up" delay={0.2} className="h-full">
-            <div className="bg-[#f8f9f8] rounded-3xl p-6 flex flex-col group h-full">
-              <div className="rounded-2xl overflow-hidden mb-6 relative h-64">
-                <img src="https://images.unsplash.com/photo-1505798577917-a65157d3320a?q=80&w=1000&auto=format&fit=crop" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" alt="Pipe Installation" />
-                <div className="absolute bottom-4 left-4 bg-white w-14 h-14 rounded-2xl flex items-center justify-center shadow-lg">
-                  <Wrench className="text-[#ff4f14]" size={28} />
-                </div>
-              </div>
-              <h3 className="text-2xl font-bold mb-3">Pipe Installation</h3>
-              <p className="text-gray-600 mb-8 flex-grow">
-                Professional pipe installation for durable plumbing systems that improve water flow and provide reliable performance for years ahead always.
-              </p>
-              <a href="#" className="flex items-center justify-between text-[#ff4f14] font-semibold group-hover:text-[#e64612]">
-                Get a Quote
-                <span className="bg-[#ff4f14] text-white w-10 h-10 rounded-full flex items-center justify-center group-hover:bg-[#e64612]">
-                  <ArrowRight size={20} />
-                </span>
-              </a>
-            </div>
-            </Reveal>
-
-            {/* Card 5 */}
-            <Reveal direction="up" delay={0.3} className="h-full">
-            <div className="bg-[#f8f9f8] rounded-3xl p-6 flex flex-col group h-full">
-              <div className="rounded-2xl overflow-hidden mb-6 relative h-64">
-                <img src="https://images.unsplash.com/photo-1620626011761-996317b8d101?q=80&w=1000&auto=format&fit=crop" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" alt="Bathroom Plumbing" />
-                <div className="absolute bottom-4 left-4 bg-white w-14 h-14 rounded-2xl flex items-center justify-center shadow-lg">
-                  <Droplets className="text-[#ff4f14]" size={28} />
-                </div>
-              </div>
-              <h3 className="text-2xl font-bold mb-3">Bathroom Plumbing</h3>
-              <p className="text-gray-600 mb-8 flex-grow">
-                Complete bathroom plumbing services for renovations, repairs, and fixture upgrades that enhance comfort and functionality.
-              </p>
-              <a href="#" className="flex items-center justify-between text-[#ff4f14] font-semibold group-hover:text-[#e64612]">
-                Get a Quote
-                <span className="bg-[#ff4f14] text-white w-10 h-10 rounded-full flex items-center justify-center group-hover:bg-[#e64612]">
-                  <ArrowRight size={20} />
-                </span>
-              </a>
-            </div>
-            </Reveal>
-
-            {/* Card 6 */}
-            <Reveal direction="up" delay={0.4} className="h-full">
-            <div className="bg-[#f8f9f8] rounded-3xl p-6 flex flex-col group h-full">
-              <div className="rounded-2xl overflow-hidden mb-6 relative h-64">
-                <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?q=80&w=1000&auto=format&fit=crop" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" alt="Mühəndislik Həlləri" />
-                <div className="absolute bottom-4 left-4 bg-white w-14 h-14 rounded-2xl flex items-center justify-center shadow-lg">
-                  <Siren className="text-[#ff4f14]" size={28} />
-                </div>
-              </div>
-              <h3 className="text-2xl font-bold mb-3">Mühəndislik Həlləri</h3>
-              <p className="text-gray-600 mb-8 flex-grow">
-                Fast 24/7 emergency plumbing services for urgent repairs, minimizing damage and restoring your home's safety with rapid expert support anytime.
-              </p>
-              <a href="#" className="flex items-center justify-between text-[#ff4f14] font-semibold group-hover:text-[#e64612]">
-                Get a Quote
-                <span className="bg-[#ff4f14] text-white w-10 h-10 rounded-full flex items-center justify-center group-hover:bg-[#e64612]">
-                  <ArrowRight size={20} />
-                </span>
-              </a>
+              <Link href="/vacancies" className="inline-flex items-center gap-2 font-bold hover:text-[#ff4f14] transition-colors">
+                Müraciət Et <ArrowRight size={20} />
+              </Link>
             </div>
             </Reveal>
           </div>
         </div>
       </section>
+
       {/* Niyə Bizi Seçməlisiniz Section */}
       <section id="about" className="py-24 px-6 lg:px-20 bg-[#f8f9f8]">
         <div className="max-w-7xl mx-auto flex flex-col items-center text-center">
@@ -378,7 +291,7 @@ export default function Home() {
           <div className="mb-16">
             <p className="text-[#ff4f14] font-semibold tracking-wider uppercase mb-4">Necə İşləyirik?</p>
             <h2 className="text-5xl font-bold mb-6 text-[#131312]">
-              From Your Call to <span className="text-[#ff4f14]">Problem Solved</span>
+              Peşəkar <span className="text-[#ff4f14]">Həll Yolları</span>
             </h2>
             <p className="text-lg text-gray-600 leading-relaxed max-w-2xl mx-auto">
               Servis və təlimlərə qoşulmaq çox sadə və şəffafdır.
@@ -473,7 +386,7 @@ export default function Home() {
             <div className="absolute inset-0 bg-white/10 rounded-full scale-110"></div>
             <img 
               src="https://images.unsplash.com/photo-1574739782594-db4ead022697?q=80&w=600&auto=format&fit=crop" 
-              alt="Emergency Plumber" 
+              alt="Təcili Servis" 
               className="w-full h-full object-cover rounded-full border-8 border-[#ff4f14]"
             />
           </div>
@@ -499,17 +412,17 @@ export default function Home() {
           <div className="grid md:grid-cols-3 gap-6">
             <Reveal direction="up" delay={0.2} className="h-full">
             <div className="rounded-3xl overflow-hidden h-80 group relative">
-              <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?q=80&w=800&auto=format&fit=crop" alt="Project 1" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
+              <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?q=80&w=800&auto=format&fit=crop" alt="Partnyor Şirkət" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
             </div>
             </Reveal>
             <Reveal direction="up" delay={0.2} className="h-full">
             <div className="rounded-3xl overflow-hidden h-80 group relative">
-              <img src="https://images.unsplash.com/photo-1620626011761-996317b8d101?q=80&w=800&auto=format&fit=crop" alt="Project 2" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
+              <img src="https://images.unsplash.com/photo-1620626011761-996317b8d101?q=80&w=800&auto=format&fit=crop" alt="Partnyor Şirkət" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
             </div>
             </Reveal>
             <Reveal direction="up" delay={0.2} className="h-full">
             <div className="rounded-3xl overflow-hidden h-80 group relative">
-              <img src="https://images.unsplash.com/photo-1607472586893-edb57cb5b3b1?q=80&w=800&auto=format&fit=crop" alt="Project 3" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
+              <img src="https://images.unsplash.com/photo-1607472586893-edb57cb5b3b1?q=80&w=800&auto=format&fit=crop" alt="Partnyor Şirkət" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
             </div>
             </Reveal>
           </div>
