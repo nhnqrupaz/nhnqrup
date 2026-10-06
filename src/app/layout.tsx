@@ -8,6 +8,8 @@ const plusJakartaSans = Plus_Jakarta_Sans({
 });
 
 import SmoothScroll from "@/components/SmoothScroll";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
   title: "NHN Qrup",
@@ -24,7 +26,11 @@ export default function RootLayout({
       <body
         className={`${plusJakartaSans.variable} antialiased text-[#131312] bg-[#f8f9f8]`}
       >
-        <SmoothScroll>{children}</SmoothScroll>
+        <SmoothScroll>
+          <Header />
+          {children}
+          <Footer />
+        </SmoothScroll>
       </body>
     </html>
   );
