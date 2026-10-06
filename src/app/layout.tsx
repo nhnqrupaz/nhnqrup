@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   title: "NHN Qrup",
   description: "Peşəkar xidmətlər və tədris",
   icons: {
-    icon: "/Logo.png",
+    icon: "/LogoPNG.png",
   }
 };
 

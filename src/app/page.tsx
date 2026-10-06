@@ -18,7 +18,7 @@ import {
 } from "lucide-react";
 import Link from "next/link";
 import Reveal from "@/components/Reveal";
-import { FaInstagram, FaFacebook, FaLinkedin } from "react-icons/fa";
+import { FaInstagram } from "react-icons/fa";
 
 export default function Home() {
   return (
@@ -28,7 +28,7 @@ export default function Home() {
         <div className="bg-white rounded-full px-6 py-4 flex items-center justify-between w-full max-w-7xl shadow-sm">
           <div className="flex items-center gap-3">
             <img src="/LogoPNG.png" alt="NHN Qrup Logo" className="h-8 w-auto object-contain" />
-            <span className="font-bold text-2xl tracking-tight">NHN</span>
+            <span className="font-black text-2xl md:text-3xl tracking-tight bg-gradient-to-r from-[#ff4f14] to-[#131312] text-transparent bg-clip-text">NHN Qrup</span>
           </div>
           <nav className="hidden lg:flex gap-8 text-[15px] font-medium text-[#131312]">
             <Link href="#">Ana Səhifə</Link>
@@ -553,13 +553,13 @@ export default function Home() {
             </ul>
             <div className="flex items-center gap-6 mt-8 text-white/50">
               <a href="#" className="hover:text-[#ff4f14] transition-colors"><FaInstagram size={24} /></a>
-              <a href="#" className="hover:text-[#ff4f14] transition-colors"><FaFacebook size={24} /></a>
-              <a href="#" className="hover:text-[#ff4f14] transition-colors"><FaLinkedin size={24} /></a>
+              
             </div>
           </div>
         </div>
         <div className="max-w-7xl mx-auto pt-8 border-t border-white/10 flex flex-col md:flex-row items-center justify-between text-white/50 text-sm">
           <p>© 2024 NHN Qrup. Bütün hüquqlar qorunur.</p>
+          <p className="mt-4 md:mt-0 font-medium tracking-wider">NHN QRUP MMC</p>
         </div>
       </footer>
     </div>
