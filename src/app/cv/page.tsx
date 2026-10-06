@@ -95,7 +95,7 @@ export default function CVPage() {
             Bizə <span className="text-[#ff4f14]">Müraciət Edin</span>
           </h1>
           <p className="text-lg text-gray-600">
-            NHN QRUP komandasına qoşulmaq və ya peşəkar kurslarımıza qeydiyyatdan keçmək üçün formu doldurun. Form göndərildikdə sistem məlumatlarınızı birbaşa info@nhnqrup.az ünvanına e-poçt olaraq hazırlayacaq.
+            NHN QRUP komandasına qoşulmaq və ya peşəkar kurslarımıza qeydiyyatdan keçmək üçün formu doldurun.
           </p>
         </Reveal>
       </section>
