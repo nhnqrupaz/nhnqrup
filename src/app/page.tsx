@@ -55,8 +55,8 @@ export default function Home() {
           </Reveal>
           
           <Reveal direction="up" delay={0.2}>
-          <p className="text-lg md:text-xl text-white/90 mb-10 max-w-2xl leading-relaxed">
-            Elektrik, Elektrik mühəndisliyi, Zəif axın sistemləri, PLC, SCADA, Ağıllı ev sistemləri üzrə ixtisaslaşmış peşəkar komanda.
+          <p className="text-base md:text-lg text-white/80 mb-8 max-w-xl leading-relaxed">
+            Elektrik, Zəif Axın və Ağıllı Ev sistemləri üzrə ixtisaslaşmış peşəkar komanda.
           </p>
           </Reveal>
           
