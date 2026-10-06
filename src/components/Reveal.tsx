@@ -42,7 +42,7 @@ export default function Reveal({
         filter: "blur(0px)",
         scale: 1,
       }}
-      viewport={{ once: true, margin: "-100px" }}
+      viewport={{ once: false, margin: "-100px" }}
       transition={{
         duration: 1.4,
         delay: delay,
