@@ -43,19 +43,19 @@ export default function Home() {
           <div className="absolute inset-0 bg-gradient-to-r from-black/60 to-transparent"></div>
         </div>
 
-        <div className="relative z-10 max-w-3xl text-white -mt-16 md:mt-0">
+        <div className="relative z-10 max-w-3xl text-white -mt-12 md:mt-0">
           <div className="inline-flex items-center gap-2 border border-[#ff4f14] bg-[#ff4f14]/80 rounded-full px-3 md:px-5 py-0.5 md:py-1 mb-4 md:mb-6 backdrop-blur-sm">
             <span className="text-xs md:text-sm font-medium">7/24 Peşəkar Elektrik və Generator Servisi</span>
           </div>
           
           <Reveal direction="up" delay={0.1}>
-          <h1 className="text-3xl md:text-6xl font-bold leading-[1.1] mb-4 md:mb-6">
+          <h1 className="text-4xl md:text-6xl font-bold leading-[1.1] mb-5 md:mb-6">
             NHN QRUP<br /><span className="text-[#ff4f14]">Servis və Təlimlər</span>
           </h1>
           </Reveal>
           
           <Reveal direction="up" delay={0.2}>
-          <p className="text-base md:text-lg text-white/80 mb-14 md:mb-8 max-w-xl leading-relaxed">
+          <p className="text-lg text-white/80 mb-20 md:mb-8 max-w-xl leading-relaxed">
             Elektrik, Zəif Axın və Ağıllı Ev sistemləri üzrə ixtisaslaşmış peşəkar komanda.
           </p>
           </Reveal>

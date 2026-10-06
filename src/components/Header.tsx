@@ -40,20 +40,20 @@ export default function Header() {
     <header className="fixed top-0 w-full z-50 flex justify-center p-4 md:p-6 transition-all duration-300">
       <div className="bg-white rounded-full px-4 md:px-5 py-3 md:py-4 flex items-center justify-between w-full max-w-5xl shadow-sm relative gap-2">
         
-        <a href="/" onClick={handleHomeClick} className="flex items-center gap-2 cursor-pointer hover:opacity-80 transition-opacity z-50">
+        <a href="/" onClick={handleHomeClick} className="flex items-center gap-2 cursor-pointer hover:opacity-80 transition-opacity z-50 shrink-0">
           <img src="/LogoPNG.png" alt="NHN Qrup Logo" className="h-8 md:h-10 w-auto object-contain" />
           <span className="font-black text-lg md:text-2xl tracking-tight text-[#131312] whitespace-nowrap shrink-0">NHN Qrup</span>
         </a>
         
         {/* Desktop Nav */}
-        <nav className="hidden lg:flex items-center gap-5 xl:gap-6 text-[15px] xl:text-[16px] font-medium text-[#131312] absolute left-1/2 -translate-x-1/2">
+        <nav className="hidden lg:flex items-center justify-center gap-4 xl:gap-6 text-[14px] xl:text-[16px] font-medium text-[#131312] flex-1 px-4 whitespace-nowrap">
           <a href="/" onClick={handleHomeClick} className="hover:text-[#ff4f14] transition-colors cursor-pointer">Ana Səhifə</a>
           {navLinks.map((link) => (
             <Link key={link.path} href={link.path} className="hover:text-[#ff4f14] transition-colors">{link.name}</Link>
           ))}
         </nav>
         
-        <div className="hidden lg:block z-50">
+        <div className="hidden lg:block z-50 shrink-0">
           <Link href="/contact" className="bg-[#ff4f14] text-white px-6 py-2.5 rounded-full font-semibold hover:bg-[#e64612] transition-colors whitespace-nowrap">
             ƏLAQƏ
           </Link>
