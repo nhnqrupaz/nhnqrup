@@ -44,9 +44,9 @@ export default function Reveal({
       }}
       viewport={{ once: true, margin: "-100px" }}
       transition={{
-        duration: 0.8,
+        duration: 1.4,
         delay: delay,
-        ease: [0.16, 1, 0.3, 1], // Custom smooth ease
+        ease: [0.22, 1, 0.36, 1], // Smooth and slow ease
       }}
     >
       {children}
