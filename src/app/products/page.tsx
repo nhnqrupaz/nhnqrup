@@ -1,3 +1,6 @@
+export const dynamic = 'force-dynamic';
+export const revalidate = 0;
+
 import Reveal from "@/components/Reveal";
 import { PackageOpen } from "lucide-react";
 import { supabase } from "@/lib/supabase";
