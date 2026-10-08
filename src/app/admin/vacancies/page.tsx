@@ -39,6 +39,11 @@ export default function AdminVacancies() {
     const payload = { ...form };
     delete payload.id;
     delete payload.created_at;
+    
+    // Clean up empty fields so we don't send undefined
+    Object.keys(payload).forEach(key => {
+        if (payload[key] === undefined) delete payload[key];
+    });
 
     if (editingId) {
       const { error } = await supabase.from('vacancies').update(payload).eq('id', editingId);
@@ -88,7 +93,7 @@ export default function AdminVacancies() {
             {editingId ? <><Edit size={20} className="text-blue-500"/> Redaktə edilir</> : <><Plus size={20} className="text-[#ff4f14]"/> Yeni Əlavə Et</>}
           </h2>
           {editingId && (
-            <button onClick={handleCancelEdit} className="text-gray-500 hover:text-gray-700 flex items-center gap-1 text-sm bg-gray-100 px-3 py-1.5 rounded-lg">
+            <button type="button" onClick={handleCancelEdit} className="text-gray-500 hover:text-gray-700 flex items-center gap-1 text-sm bg-gray-100 px-3 py-1.5 rounded-lg">
               <X size={16} /> Ləğv et
             </button>
           )}
@@ -101,11 +106,15 @@ export default function AdminVacancies() {
             <input required type="text" value={form.title || ''} onChange={e => setForm({...form, title: e.target.value})} className="w-full bg-gray-50 border border-gray-200 rounded-xl px-4 py-2" />
           </div>
           <div>
+            <label className="block text-sm font-medium mb-1">İş növü (məs: Tam iş günü)</label>
+            <input required type="text" value={form.type || ''} onChange={e => setForm({...form, type: e.target.value})} className="w-full bg-gray-50 border border-gray-200 rounded-xl px-4 py-2" />
+          </div>
+          <div>
             <label className="block text-sm font-medium mb-1">Qısa Məlumat</label>
             <textarea required value={form.description || ''} onChange={e => setForm({...form, description: e.target.value})} className="w-full bg-gray-50 border border-gray-200 rounded-xl px-4 py-2 min-h-[100px]" />
           </div>
           <div>
-            <label className="block text-sm font-medium mb-1">Tələblər</label>
+            <label className="block text-sm font-medium mb-1">Tələblər (vergüllə ayırın)</label>
             <textarea required value={form.requirements || ''} onChange={e => setForm({...form, requirements: e.target.value})} className="w-full bg-gray-50 border border-gray-200 rounded-xl px-4 py-2 min-h-[100px]" />
           </div>
           <div>
@@ -139,10 +148,10 @@ export default function AdminVacancies() {
                 </div>
               </div>
               <div className="flex items-center gap-2">
-                <button onClick={() => handleEdit(item)} className="text-blue-500 p-2 hover:bg-blue-50 rounded-lg transition-colors" title="Redaktə et">
+                <button type="button" onClick={() => handleEdit(item)} className="text-blue-500 p-2 hover:bg-blue-50 rounded-lg transition-colors" title="Redaktə et">
                   <Edit size={20} />
                 </button>
-                <button onClick={() => handleDelete(item.id)} className="text-red-500 p-2 hover:bg-red-50 rounded-lg transition-colors" title="Sil">
+                <button type="button" onClick={() => handleDelete(item.id)} className="text-red-500 p-2 hover:bg-red-50 rounded-lg transition-colors" title="Sil">
                   <Trash2 size={20} />
                 </button>
               </div>

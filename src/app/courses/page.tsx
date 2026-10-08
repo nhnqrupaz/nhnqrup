@@ -54,10 +54,10 @@ export default async function CoursesPage() {
                   <p className="text-gray-600 mb-6 flex-grow">{course.description || course.desc}</p>
                   
                   <div className="space-y-3 mb-8">
-                    {course.features ? course.features.map((f: string, i: number) => (
+                    {course.features ? (Array.isArray(course.features) ? course.features : String(course.features).split(',')).map((f: string, i: number) => (
                       <div key={i} className="flex items-center gap-3 text-gray-700">
                         <CheckIcon />
-                        <span className="font-medium">{f}</span>
+                        <span className="font-medium">{f.trim()}</span>
                       </div>
                     )) : (
                       <div className="flex items-center gap-3 text-gray-700">

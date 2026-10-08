@@ -39,6 +39,11 @@ export default function AdminProducts() {
     const payload = { ...form };
     delete payload.id;
     delete payload.created_at;
+    
+    // Clean up empty fields so we don't send undefined
+    Object.keys(payload).forEach(key => {
+        if (payload[key] === undefined) delete payload[key];
+    });
 
     if (editingId) {
       const { error } = await supabase.from('products').update(payload).eq('id', editingId);
@@ -88,7 +93,7 @@ export default function AdminProducts() {
             {editingId ? <><Edit size={20} className="text-blue-500"/> Redaktə edilir</> : <><Plus size={20} className="text-[#ff4f14]"/> Yeni Əlavə Et</>}
           </h2>
           {editingId && (
-            <button onClick={handleCancelEdit} className="text-gray-500 hover:text-gray-700 flex items-center gap-1 text-sm bg-gray-100 px-3 py-1.5 rounded-lg">
+            <button type="button" onClick={handleCancelEdit} className="text-gray-500 hover:text-gray-700 flex items-center gap-1 text-sm bg-gray-100 px-3 py-1.5 rounded-lg">
               <X size={16} /> Ləğv et
             </button>
           )}
@@ -131,10 +136,10 @@ export default function AdminProducts() {
                 </div>
               </div>
               <div className="flex items-center gap-2">
-                <button onClick={() => handleEdit(item)} className="text-blue-500 p-2 hover:bg-blue-50 rounded-lg transition-colors" title="Redaktə et">
+                <button type="button" onClick={() => handleEdit(item)} className="text-blue-500 p-2 hover:bg-blue-50 rounded-lg transition-colors" title="Redaktə et">
                   <Edit size={20} />
                 </button>
-                <button onClick={() => handleDelete(item.id)} className="text-red-500 p-2 hover:bg-red-50 rounded-lg transition-colors" title="Sil">
+                <button type="button" onClick={() => handleDelete(item.id)} className="text-red-500 p-2 hover:bg-red-50 rounded-lg transition-colors" title="Sil">
                   <Trash2 size={20} />
                 </button>
               </div>
