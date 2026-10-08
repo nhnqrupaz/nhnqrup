@@ -1,6 +1,6 @@
-"use client";
 
 import Image from "next/image";
+import { supabase } from "@/lib/supabase";
 import { 
   Zap, Home as HomeIcon, Monitor, Activity, Cpu, Lightbulb, Briefcase, 
   Phone, 
@@ -25,7 +25,13 @@ import NumberCounter from "@/components/NumberCounter";
 import { motion } from "framer-motion";
 import { FaInstagram } from "react-icons/fa";
 
-export default function Home() {
+export default async function Home() {
+  const { data: settings } = await supabase.from('settings').select('*').eq('id', 1).single();
+  const { data: partners } = await supabase.from('partners').select('*');
+
+  const heroImg = settings?.hero_image_url || "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=3270&auto=format&fit=crop";
+  const ctaImg = settings?.cta_image_url || "https://images.unsplash.com/photo-1542013936693-884638332954?q=80&w=1600&auto=format&fit=crop";
+
   return (
     <div className="flex flex-col min-h-screen bg-[#f8f9f8]">
             {/* Navigation */}
@@ -35,7 +41,7 @@ export default function Home() {
         {/* Background Image (Using placeholder) */}
         <div className="absolute inset-0 z-0">
           <img 
-            src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=3270&auto=format&fit=crop" 
+            src={heroImg} 
             alt="Hero Background" 
             className="w-full h-full object-cover"
           />
@@ -238,7 +244,7 @@ export default function Home() {
         <Reveal direction="up" delay={0.2}>
         <div className="max-w-7xl mx-auto rounded-[2rem] overflow-hidden relative h-[500px] md:h-[600px] group cursor-pointer">
           <img 
-            src="https://images.unsplash.com/photo-1542013936693-884638332954?q=80&w=1600&auto=format&fit=crop" 
+            src={ctaImg} 
             alt="Praktiki Dərslər" 
             className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
           />
