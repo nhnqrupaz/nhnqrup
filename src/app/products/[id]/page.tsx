@@ -4,8 +4,9 @@ import Link from "next/link";
 import { ArrowLeft, MessageCircle } from "lucide-react";
 import Reveal from "@/components/Reveal";
 
-export default async function ProductDetailPage({ params }: { params: { id: string } }) {
-  const { data: product, error } = await supabase.from('products').select('*').eq('id', params.id).single();
+export default async function ProductDetailPage({ params }: { params: Promise<{ id: string }> }) {
+  const resolvedParams = await params;
+  const { data: product, error } = await supabase.from('products').select('*').eq('id', resolvedParams.id).single();
 
   if (error || !product) {
     notFound();
