@@ -108,10 +108,10 @@ export default async function Home() {
           <Reveal direction="up" delay={0.1}>
           <div className="mb-10 md:mb-16 max-w-2xl">
             <p className="text-[#ff4f14] font-semibold tracking-wider uppercase mb-4">Fəaliyyət Sahələrimiz</p>
-            <h2 className="text-3xl md:text-5xl font-bold mb-4 md:mb-6 text-[#131312]">
+            <h2 className="text-2xl md:text-4xl font-bold mb-3 md:mb-4 text-[#131312]">
               Professional <span className="text-[#ff4f14]">Təlimlər və Servis</span>
             </h2>
-            <p className="text-lg text-gray-600 leading-relaxed">
+            <p className="text-base text-gray-600 leading-relaxed">
               NHN QRUP olaraq ən müasir texnologiyalarla həm peşəkar kurslar, həm mühəndislik servisləri, həm də karyera imkanları təklif edirik.
             </p>
           </div>
@@ -172,7 +172,7 @@ export default async function Home() {
           <Reveal direction="up" delay={0.1}>
           <div className="mb-10 md:mb-16 max-w-3xl">
             <p className="text-[#ff4f14] font-semibold tracking-wider uppercase mb-4">Niyə Bizi Seçməlisiniz</p>
-            <h2 className="text-3xl md:text-5xl font-bold mb-4 md:mb-6 text-[#131312]">
+            <h2 className="text-2xl md:text-4xl font-bold mb-3 md:mb-4 text-[#131312]">
               Niyə Məhz <span className="text-[#ff4f14]">NHN QRUP?</span>
             </h2>
             <p className="text-lg text-gray-600 leading-relaxed max-w-2xl mx-auto">
@@ -264,7 +264,7 @@ export default async function Home() {
           <Reveal direction="up" delay={0.1}>
           <div className="mb-10 md:mb-16">
             <p className="text-[#ff4f14] font-semibold tracking-wider uppercase mb-4">Necə İşləyirik?</p>
-            <h2 className="text-3xl md:text-5xl font-bold mb-4 md:mb-6 text-[#131312]">
+            <h2 className="text-2xl md:text-4xl font-bold mb-3 md:mb-4 text-[#131312]">
               Peşəkar <span className="text-[#ff4f14]">Həll Yolları</span>
             </h2>
             <p className="text-lg text-gray-600 leading-relaxed max-w-2xl mx-auto">
@@ -374,10 +374,10 @@ export default async function Home() {
           <Reveal direction="up" delay={0.1}>
           <div className="mb-10 md:mb-16 max-w-2xl">
             <p className="text-[#ff4f14] font-semibold tracking-wider uppercase mb-4">Partnyorlarımız</p>
-            <h2 className="text-3xl md:text-5xl font-bold mb-4 md:mb-6 text-[#131312]">
+            <h2 className="text-2xl md:text-4xl font-bold mb-3 md:mb-4 text-[#131312]">
               Bizə Güvənən <span className="text-[#ff4f14]">Şirkətlər</span>
             </h2>
-            <p className="text-lg text-gray-600 leading-relaxed">
+            <p className="text-base text-gray-600 leading-relaxed">
               Azərbaycanda və regionda bir çox tanınmış şirkətlərlə rəsmi əməkdaşlıq edirik.
             </p>
           </div>
@@ -386,7 +386,7 @@ export default async function Home() {
           <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-6">
             {(partners || []).map((p: any, i: number) => (
               <Reveal key={p.id} direction="up" delay={0.2 + (i * 0.1)} className="h-full">
-                <div className="rounded-2xl overflow-hidden h-40 bg-white flex items-center justify-center border border-gray-100 hover:shadow-md transition-shadow grayscale hover:grayscale-0 p-4">
+                <div className="rounded-2xl overflow-hidden h-48 bg-white flex items-center justify-center border border-gray-100 hover:shadow-md transition-shadow p-6">
                   <img src={p.logo_url} alt={p.name} loading="lazy" className="max-w-full max-h-full object-contain" />
                 </div>
               </Reveal>

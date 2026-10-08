@@ -36,7 +36,7 @@ export default function AdminPartners() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     
-    const payload = { ...form };
+    const payload = { ...form, name: form.name || 'Partnyor' };
     delete payload.id;
     delete payload.created_at;
     
@@ -101,10 +101,7 @@ export default function AdminPartners() {
         
         <form onSubmit={handleSubmit} className="space-y-4">
           
-          <div>
-            <label className="block text-sm font-medium mb-1">Şirkət Adı</label>
-            <input required type="text" value={form.name || ''} onChange={e => setForm({...form, name: e.target.value})} className="w-full bg-gray-50 border border-gray-200 rounded-xl px-4 py-2" />
-          </div>
+          
           <div>
             <label className="block text-sm font-medium mb-1">Loqo Şəkli</label>
             {form.logo_url && <img src={form.logo_url} className="h-24 w-auto mb-2 rounded" />}
