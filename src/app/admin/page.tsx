@@ -7,6 +7,8 @@ import { Upload, Save } from 'lucide-react';
 export default function AdminSettings() {
   const [heroImage, setHeroImage] = useState('');
   const [ctaImage, setCtaImage] = useState('');
+  const [whyUsImage, setWhyUsImage] = useState('');
+  const [urgentImage, setUrgentImage] = useState('');
   const [loading, setLoading] = useState(true);
   const [saving, setSaving] = useState(false);
 
@@ -20,6 +22,8 @@ export default function AdminSettings() {
       if (data) {
         setHeroImage(data.hero_image_url || '');
         setCtaImage(data.cta_image_url || '');
+        setWhyUsImage(data.why_us_image_url || '');
+        setUrgentImage(data.urgent_image_url || '');
       }
     } catch (err) {
       console.error(err);
@@ -51,7 +55,7 @@ export default function AdminSettings() {
     setSaving(true);
     const { error } = await supabase
       .from('settings')
-      .upsert({ id: 1, hero_image_url: heroImage, cta_image_url: ctaImage, updated_at: new Date().toISOString() });
+      .upsert({ id: 1, hero_image_url: heroImage, cta_image_url: ctaImage, why_us_image_url: whyUsImage, urgent_image_url: urgentImage, updated_at: new Date().toISOString() });
     
     setSaving(false);
     if (error) {
@@ -94,6 +98,36 @@ export default function AdminSettings() {
             <Upload size={20} className="text-gray-500" />
             <span className="text-gray-600 font-medium">Yeni şəkil seç və yüklə</span>
             <input type="file" className="hidden" accept="image/*" onChange={e => handleUpload(e, setCtaImage)} />
+          </label>
+        </div>
+
+        <hr className="border-gray-100" />
+
+        {/* Why Us Image */}
+        <div>
+          <label className="block text-sm font-bold text-gray-700 mb-2">Niyə Bizi Seçməlisiniz (Orta Şəkil)</label>
+          {whyUsImage && (
+            <img src={whyUsImage} alt="Why Us" className="w-full h-48 object-cover rounded-xl mb-4" />
+          )}
+          <label className="flex items-center gap-2 bg-gray-50 border border-gray-200 px-4 py-3 rounded-xl cursor-pointer hover:bg-gray-100 transition-colors">
+            <Upload size={20} className="text-gray-500" />
+            <span className="text-gray-600 font-medium">Yeni şəkil seç və yüklə</span>
+            <input type="file" className="hidden" accept="image/*" onChange={e => handleUpload(e, setWhyUsImage)} />
+          </label>
+        </div>
+
+        <hr className="border-gray-100" />
+
+        {/* Urgent Image */}
+        <div>
+          <label className="block text-sm font-bold text-gray-700 mb-2">Təcili Xidmət Şəkli (Dairəvi Şəkil)</label>
+          {urgentImage && (
+            <img src={urgentImage} alt="Urgent" className="w-48 h-48 object-cover rounded-full mx-auto border-8 border-gray-100 mb-4" />
+          )}
+          <label className="flex items-center gap-2 bg-gray-50 border border-gray-200 px-4 py-3 rounded-xl cursor-pointer hover:bg-gray-100 transition-colors">
+            <Upload size={20} className="text-gray-500" />
+            <span className="text-gray-600 font-medium">Yeni şəkil seç və yüklə</span>
+            <input type="file" className="hidden" accept="image/*" onChange={e => handleUpload(e, setUrgentImage)} />
           </label>
         </div>
 

@@ -210,7 +210,7 @@ export default async function Home() {
             <Reveal direction="up" delay={0.3}>
             <div className="rounded-3xl overflow-hidden h-[600px] lg:h-auto relative">
               <img 
-                src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?q=80&w=800&auto=format&fit=crop" 
+                src={settings?.why_us_image_url || "https://images.unsplash.com/photo-1621905251189-08b45d6a269e?q=80&w=800&auto=format&fit=crop"} 
                 alt="NHN QRUP Eksperti" 
                 className="w-full h-full object-cover"
               />
@@ -359,7 +359,7 @@ export default async function Home() {
           <div className="relative w-72 h-72 hidden md:block">
             <div className="absolute inset-0 bg-white/10 rounded-full scale-110"></div>
             <img 
-              src="https://images.unsplash.com/photo-1574739782594-db4ead022697?q=80&w=600&auto=format&fit=crop" 
+              src={settings?.urgent_image_url || "https://images.unsplash.com/photo-1574739782594-db4ead022697?q=80&w=600&auto=format&fit=crop"} 
               alt="Təcili Servis" 
               className="w-full h-full object-cover rounded-full border-8 border-[#ff4f14]"
             />
