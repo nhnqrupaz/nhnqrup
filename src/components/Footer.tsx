@@ -1,9 +1,12 @@
 'use client';
 
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { FaInstagram } from "react-icons/fa";
 
 export default function Footer() {
+  const pathname = usePathname();
+  if (pathname.startsWith("/admin")) return null;
   return (
     <footer id="contact" className="bg-[#131312] text-white pt-10 md:pt-16 pb-6 px-6 lg:px-20 overflow-hidden">
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-12 mb-8 md:mb-12">
