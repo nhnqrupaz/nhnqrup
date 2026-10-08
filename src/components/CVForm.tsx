@@ -69,6 +69,11 @@ export default function CVForm({
       </div>
       
       <div>
+        <label className="block text-sm font-medium text-gray-700 mb-2">Mövzu</label>
+        <input required type="text" name="Movzu" className="w-full bg-gray-50 border border-gray-200 rounded-xl px-4 py-3 focus:outline-none focus:border-[#ff4f14]" placeholder="Müraciətinizin mövzusu (məs: İşə qəbul, Təcrübə proqramı və s.)" />
+      </div>
+      
+      <div>
         <label className="block text-sm font-medium text-gray-700 mb-2">Müraciət etdiyiniz sahə</label>
         <select required name="Secilen_Vezife_ve_ya_Kurs" value={job} onChange={e => setJob(e.target.value)} className="w-full bg-gray-50 border border-gray-200 rounded-xl px-4 py-3 focus:outline-none focus:border-[#ff4f14]">
           <option value="">-- Seçin --</option>
