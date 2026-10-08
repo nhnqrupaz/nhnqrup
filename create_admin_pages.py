@@ -6,6 +6,7 @@ pages = {
         'table': 'products',
         'fields': [
             {'name': 'title', 'label': 'Başlıq', 'type': 'text'},
+            {'name': 'price', 'label': 'Qiymət (məs: 120 ₼)', 'type': 'text'},
             {'name': 'description', 'label': 'Məzmun / Açıqlama', 'type': 'textarea'},
             {'name': 'image_url', 'label': 'Şəkil', 'type': 'image'}
         ]

@@ -1,4 +1,6 @@
-import Reveal from "@/components/Reveal";
+import os
+
+products_code = """import Reveal from "@/components/Reveal";
 import { PackageOpen } from "lucide-react";
 import { supabase } from "@/lib/supabase";
 import Link from "next/link";
@@ -72,3 +74,7 @@ export default async function ProductsPage() {
     </div>
   );
 }
+"""
+
+with open('src/app/products/page.tsx', 'w') as f:
+    f.write(products_code)

@@ -106,6 +106,10 @@ export default function AdminProducts() {
             <input required type="text" value={form.title || ''} onChange={e => setForm({...form, title: e.target.value})} className="w-full bg-gray-50 border border-gray-200 rounded-xl px-4 py-2" />
           </div>
           <div>
+            <label className="block text-sm font-medium mb-1">Qiymət (məs: 120 ₼)</label>
+            <input required type="text" value={form.price || ''} onChange={e => setForm({...form, price: e.target.value})} className="w-full bg-gray-50 border border-gray-200 rounded-xl px-4 py-2" />
+          </div>
+          <div>
             <label className="block text-sm font-medium mb-1">Məzmun / Açıqlama</label>
             <textarea required value={form.description || ''} onChange={e => setForm({...form, description: e.target.value})} className="w-full bg-gray-50 border border-gray-200 rounded-xl px-4 py-2 min-h-[100px]" />
           </div>
