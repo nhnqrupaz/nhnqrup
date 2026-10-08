@@ -33,7 +33,6 @@ export default function Header() {
     { name: 'Kurslar', path: '/courses' },
     { name: 'Vakansiyalar', path: '/vacancies' },
     { name: 'CV Göndər', path: '/cv' },
-    { name: 'Əlaqə', path: '/contact' }
   ];
 
   return (
