@@ -56,7 +56,7 @@ export default function CVForm({
       <div className="grid md:grid-cols-2 gap-6">
         <div>
           <label className="block text-sm font-medium text-gray-700 mb-2">Ad və Soyad</label>
-          <input required type="text" name="Ad_və_Soyad" className="w-full bg-gray-50 border border-gray-200 rounded-xl px-4 py-3 focus:outline-none focus:border-[#ff4f14]" placeholder="Adınızı daxil edin" />
+          <input required type="text" name="Ad_Soyad" className="w-full bg-gray-50 border border-gray-200 rounded-xl px-4 py-3 focus:outline-none focus:border-[#ff4f14]" placeholder="Adınızı daxil edin" />
         </div>
         <div>
           <label className="block text-sm font-medium text-gray-700 mb-2">Telefon</label>
@@ -70,7 +70,7 @@ export default function CVForm({
       
       <div>
         <label className="block text-sm font-medium text-gray-700 mb-2">Müraciət etdiyiniz sahə</label>
-        <select required name="Müraciət_Edilən_Sahə" value={job} onChange={e => setJob(e.target.value)} className="w-full bg-gray-50 border border-gray-200 rounded-xl px-4 py-3 focus:outline-none focus:border-[#ff4f14]">
+        <select required name="Secilen_Vezife_ve_ya_Kurs" value={job} onChange={e => setJob(e.target.value)} className="w-full bg-gray-50 border border-gray-200 rounded-xl px-4 py-3 focus:outline-none focus:border-[#ff4f14]">
           <option value="">-- Seçin --</option>
           {vacancies.length > 0 && (
             <optgroup label="Vakansiyalar">
@@ -121,7 +121,7 @@ export default function CVForm({
         Müraciəti Göndər
       </button>
       
-      <p className="text-xs text-center text-gray-400 mt-4">İlk müraciət zamanı email qutunuza "FormSubmit" tərəfindən aktivasiya mesajı gedə bilər.</p>
+      
     </form>
   );
 }
