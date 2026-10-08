@@ -47,7 +47,7 @@ export default function CVForm({
       encType="multipart/form-data"
     >
       {/* FormSubmit Configuration */}
-      <input type="hidden" name="_subject" value="YENİ CV MÜRACİƏTİ (Saytdan)" />
+      <input type="hidden" name="_subject" value={job ? `Yeni Müraciət: ${job}` : "Yeni CV Müraciəti (Saytdan)"} />
       <input type="hidden" name="_captcha" value="false" />
       <input type="hidden" name="_template" value="table" />
       {/* We assume the site is deployed to https://www.nhnqrup.az. We use dynamic origin if possible, but formsubmit requires absolute URL. */}
