@@ -1,4 +1,7 @@
-'use client';
+with open('src/components/CVForm.tsx', 'r') as f:
+    c = f.read()
+
+new_form = """'use client';
 
 import { Upload, CheckCircle2 } from "lucide-react";
 import { useSearchParams } from "next/navigation";
@@ -51,7 +54,9 @@ export default function CVForm({
       <input type="hidden" name="_captcha" value="false" />
       <input type="hidden" name="_template" value="table" />
       {/* We assume the site is deployed to https://www.nhnqrup.az. We use dynamic origin if possible, but formsubmit requires absolute URL. */}
-      <input type="hidden" name="_next" value="https://nhnqrup.az/cv?success=true" />
+      {typeof window !== 'undefined' && (
+        <input type="hidden" name="_next" value={`${window.location.origin}/cv?success=true`} />
+      )}
 
       <div className="grid md:grid-cols-2 gap-6">
         <div>
@@ -125,3 +130,7 @@ export default function CVForm({
     </form>
   );
 }
+"""
+
+with open('src/components/CVForm.tsx', 'w') as f:
+    f.write(new_form)
